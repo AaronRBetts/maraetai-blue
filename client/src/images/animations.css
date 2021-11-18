@@ -1,0 +1,67 @@
+#wheel1, #wheel2, #wheel3 {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: rotate 3s infinite linear;
+}
+
+#truck {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: shake 6s infinite;
+}
+
+#road-lines {
+    animation: slide 3s infinite linear;
+}
+
+.truckBanner {
+    display: flex;
+    position: absolute;
+    top: 128px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.truckBanner svg {
+    z-index: 1;
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    20% { transform: translate(-1px, 0px) rotate(-1deg); }
+    40% { transform: translate(-2px, 1px) rotate(1deg); }
+    60% { transform: translate(0px, 2px) rotate(0deg); }
+    80% { transform: translate(1px, -1px) rotate(1deg); }
+    100% { transform: translate(1px, 1px) rotate(0deg); }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(15%);
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .truckBanner {
+        bottom: -10vh;
+        top: unset;
+    }
+    
+}
