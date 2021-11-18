@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "login server for maraetai blue",
   "main": "index.js",
+  "engines": { 
+    "npm": "8.1.2", 
+    "node": "16.3.0" 
+  },
   "scripts": {
     "dev": "node index.js",
     "heroku-postbuild": "cd client && npm install && npm run build"
