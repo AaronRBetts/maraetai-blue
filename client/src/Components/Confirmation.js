@@ -10,7 +10,7 @@ const Confirmation = (props) => {
 
         e.preventDefault()
         try {
-          const response = await fetch('https://maraetaiblue-concept.herokuapp.com/api/book', {
+          const response = await fetch(`${process.env.APIURL}/api/book`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

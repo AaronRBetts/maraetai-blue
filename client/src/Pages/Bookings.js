@@ -9,7 +9,7 @@ function Bookings() {
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
     useEffect(() => {
-      fetch('https://maraetaiblue-concept.herokuapp.com/api/bookings', {
+      fetch(`${process.env.APIURL}/api/bookings`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

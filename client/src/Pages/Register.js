@@ -13,7 +13,7 @@ function Register() {
 
   async function registerUser(event) {
     event.preventDefault()
-      const response = await fetch('https://maraetaiblue-concept.herokuapp.com/api/register', {
+      const response = await fetch(`${process.env.APIURL}/api/register`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

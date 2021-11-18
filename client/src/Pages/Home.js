@@ -19,7 +19,7 @@ function Home() {
     const [userNotes, setUserNotes] = useState('')
 
     useEffect(() => {
-      fetch('https://maraetaiblue-concept.herokuapp.com/api/home', {
+      fetch(`${process.env.APIURL}/api/home`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
