@@ -89,6 +89,7 @@ h6 {
 .navbar {
   position: fixed;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   top: 0;
   left: 0;
@@ -104,6 +105,7 @@ h6 {
 .nav-header {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .nav-btn {
   background: transparent;
@@ -117,7 +119,7 @@ h6 {
 }
 .nav-logo-text{
   padding: 0 12px;
-  margin: auto 0;
+  margin: auto;
 }
 .nav-links {
   height: 0;
@@ -133,30 +135,33 @@ h6 {
   color: var(--mainBlack);
   transition: var(--mainTransition);
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
   color: var(--primaryColor);
 }
+.nav-center {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
 
 .show-nav {
   height: 100vh;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
+  .nav-header {
+    width: auto;
+  }
   .nav-btn {
     display: none;
-  }
-  .nav-center {
-    justify-content: center;
-    max-width: 1170px;
-    display: flex;
   }
   .nav-links {
     height: auto;
     display: flex;
-    margin-left: 4rem;
   }
   .nav-links a {
     margin: 0 1rem;
