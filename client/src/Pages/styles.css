@@ -40,6 +40,13 @@
     padding-top: 30vh;
 }
 
+.bookingsCard {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../../src/images/MB_background_alt.jpg');
+    padding-top: 200px;
+}
+
 @media screen and (max-width: 768px) {
     .servicesCard {
         padding: 0;
@@ -176,6 +183,16 @@ input:focus-visible, textarea:focus-visible {
 }
 
 .servicesWrapper {
+    display: flow-root;
+    max-width: 1000px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+    padding: 5vh 10vw;
+    background-color: rgba(255,255,255,1);
+    text-align: left;
+    margin: 0 auto 2em;
+}
+
+.bookingsWrapper {
     display: flow-root;
     max-width: 1000px;
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);

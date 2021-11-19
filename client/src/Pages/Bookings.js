@@ -26,8 +26,8 @@ function Bookings() {
 
     return (
         <div>
-          <div className="servicesCard">
-            <div className="servicesWrapper">
+          <div className="bookingsCard">
+            <div className="bookingsWrapper">
             <h1>Upcoming Appointments</h1>
                   <div className="appointmentsWrapper">
                 {appointments.length >= 1 ? appointments.map((appointment, i) => (
