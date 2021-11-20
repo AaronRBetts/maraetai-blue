@@ -2,6 +2,7 @@ import React from 'react'
 import '../Pages/styles.css'
 import '../App.css'
 import { FaPhone, FaFacebook, FaTwitter } from 'react-icons/fa'
+import {Link} from 'react-router-dom'
 import '../Pages/styles.css'
 import logo from '../images/MB_Logo_alt.svg'
 
@@ -22,20 +23,20 @@ const Footer = () => {
                         <div className="item">
                             <h3>Services</h3>
                             <ul>
-                                <li><a href="/services#fill">Water Tank Filling</a></li>
-                                <li><a href="/services#clean">Water Tank Cleaning</a></li>
+                                <li><Link to="/services">Water Tank Filling</Link></li>
+                                <li><Link to="/services">Water Tank Cleaning</Link></li>
                             </ul>
                         </div>
                         <div className="item">
                             <h3>About</h3>
                             <ul>
-                                <li><a href="/">FAQ</a></li>
-                                <li><a href="/">Maraetai Blue</a></li>
+                                <li><Link to="/">FAQ</Link></li>
+                                <li><Link to="/">Maraetai Blue</Link></li>
                             </ul>
                         </div>
                         <div className="item social">
-                            <a href="#https://www.facebook.com/maraetaiblue"><FaFacebook /></a>
-                            <a href="https://twitter.com/maraetaiblue?lang=fi"><FaTwitter /></a>
+                            <Link to="#https://www.facebook.com/maraetaiblue"><FaFacebook /></Link>
+                            <Link to="https://twitter.com/maraetaiblue?lang=fi"><FaTwitter /></Link>
                             <p className="copyright">Maraetai Blue © 2021</p>
                             <img alt="maraetai blue logo" src={logo}/>
                             <p className="copyright">Website from <a href="https://funnelweb.nz/">Funnel Web</a> &amp; <a href="https://AaronRBetts.github.io/">Aaron Betts</a></p>

@@ -29,7 +29,7 @@ const Service =(props) => {
                             <div className="tab-content">
                                 <div className="servicesBtnWrapper">
                                     <input className="btn-primary landing" type="submit" value="Book Delivery" onClick={handleClick}/>
-                                    <a className="btn-secondary landing" type="submit" href="/services#fill">Learn more</a>
+                                    <a className="btn-secondary landing" type="submit" href="/services">Learn more</a>
                                 </div>
                             </div>
                         </div>
@@ -41,7 +41,7 @@ const Service =(props) => {
                             <div className="tab-content">
                                 <div className="servicesBtnWrapper">
                                     <input className="btn-primary landing" type="submit" value="Book Clean" onClick={handleClick}/>
-                                    <a className="btn-secondary landing" type="submit" href="/services#clean">Learn more</a>
+                                    <a className="btn-secondary landing" type="submit" href="/services">Learn more</a>
                                 </div>
                             </div>
                         </div>

@@ -2,6 +2,8 @@ import React from 'react'
 import '../Pages/styles.css'
 import '../App.css'
 
+require('dotenv').config();
+
 const Confirmation = (props) => {
   
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -10,7 +12,7 @@ const Confirmation = (props) => {
 
         e.preventDefault()
         try {
-          const response = await fetch(`${process.env.APIURL}/api/book`, {
+          const response = await fetch(`${process.env.REACT_APP_APIURL}/api/book`, {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'
@@ -37,7 +39,7 @@ const Confirmation = (props) => {
     }
 
     function processAppointment(data) {
-      console.log(data)
+      console.log('process appointment')
     }
 
     return (

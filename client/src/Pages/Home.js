@@ -19,7 +19,7 @@ function Home() {
     const [userNotes, setUserNotes] = useState('')
 
     useEffect(() => {
-      fetch(`${process.env.APIURL}/api/home`, {
+      fetch(`${process.env.REACT_APP_APIURL}/api/home`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

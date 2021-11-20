@@ -9,7 +9,7 @@ function Bookings() {
     var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
     useEffect(() => {
-      fetch(`${process.env.APIURL}/api/bookings`, {
+      fetch(`${process.env.REACT_APP_APIURL}/api/bookings`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

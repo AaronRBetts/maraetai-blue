@@ -10,7 +10,7 @@ function Login() {
 
   async function loginUser(event) {
     event.preventDefault()
-    const response = await fetch(`${process.env.APIURL}/api/login`, {
+    const response = await fetch(`${process.env.REACT_APP_APIURL}/api/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -29,7 +29,7 @@ function Login() {
     } else {
       alert('Your username and password combination is incorrect')
     }
-    console.log(data)
+    console.log('logged in')
   }
 
   return (

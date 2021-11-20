@@ -11,21 +11,19 @@ import Navbar from './Components/Navbar'
 
 const App = () => {
     return(
-        <div>
-            <Router>
+        <Router>
             <Navbar />
-                <Routes>
-                    <Route path="/" exact element={<Home />}/>
-                    <Route path="/bookings" exact element={<Bookings />}/>
-                    <Route path="/services" exact element={<Services />}/>
-                    <Route path="/about" exact element={<About />}/>
-                    <Route path="/contact" exact element={<Contact />}/>
-                    <Route path="/login" exact element={<Login />}/>
-                    <Route path="/register" exact  element={<Register />} />
-                    <Route path="/home" exact  element={<Home />} />
-                </Routes>
-            </Router>
-        </div>
+            <Routes>
+                <Route path="/" exact element={<Home />}/>
+                <Route path="/bookings" exact element={<Bookings />}/>
+                <Route path="/services" exact element={<Services />}/>
+                <Route path="/about" exact element={<About />}/>
+                <Route path="/contact" exact element={<Contact />}/>
+                <Route path="/login" exact element={<Login />}/>
+                <Route path="/register" exact  element={<Register />} />
+                <Route path="/home" exact  element={<Home />} />
+            </Routes>
+        </Router>
     )
 }
 

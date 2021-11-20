@@ -10,7 +10,7 @@ function ChangePassword() {
   async function ChangePass(event) {
     event.preventDefault()
     if (password = password2) {
-      const response = await fetch(`${process.env.APIURL}/api/change-password`, {
+      const response = await fetch(`${process.env.REACT_APP_APIURL}/api/change-password`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
