@@ -179,3 +179,10 @@ h6 {
 .landingText b {
     color: var(--secondaryColor);
 }
+
+.btn-primary:disabled {
+  cursor: default;
+    color: rgba(16, 16, 16, 0.3);
+    background-color: rgba(239, 239, 239, 0.3);
+    border-color: rgba(118, 118, 118, 0.3);
+}

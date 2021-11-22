@@ -9,35 +9,46 @@ function Register() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [password2, setPassword2] = useState('')
-  const [err, setErr] = useState('')
+  const [err, setErr] = useState({})
   const [disable, setDisabled] = useState(true)
-  const [nameError, setNameError] = useState(null)
 
   const firstRender = useRef(true)
 
   useEffect(() => {
   
-    // we want to skip validation on first render
     if (firstRender.current) {
       firstRender.current = false
       return
     }
 
-    // here we can disable/enable the save button by wrapping the setState function
-    // in a call to the validation function which returns true/false
     setDisabled(formValidation())
     
-  }, [name]) // any state variable(s) included in here will trigger the effect to run
+  }, [name, email, password, password2])
   
-  // here we run any validation, returning true/false
   const formValidation = () => {
+    let regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    let regPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d#$@!%&*?]{8,30}$/;
+    let newErrors = {}
+    let err = false
+    
     if (name === "") {
-      setNameError('Name cant be blank!')
-      return true
-    } else {
-      setNameError(null)
-      return false
+      newErrors.name = <><hr/>Name can't be blank</>
+      err = true
     }
+    if (!regEmail.test(email)) {
+      newErrors.email = <><hr/>Enter a valid email address</>
+      err = true
+    }
+    if (!regPassword.test(password)) {
+      newErrors.password = <><hr/>Password must contain atleast: <br/>1 upper case letter, <br/>1 lower case letter, <br/>1 number, <br/>and be atleast 8 characters</>
+      err = true
+    }
+    if (password !== password2) {
+      newErrors.password = <><hr/>Passwords do not match</>
+      err = true
+    }
+    setErr(newErrors)
+    return err;
   }
 
   async function registerUser(event) {
@@ -58,7 +69,7 @@ function Register() {
       const data = await response.json();
       console.log('registered')
   
-      data.success ? window.location = data.redirect : setErr(data.error)
+      data.success ? window.location = data.redirect : setErr('')
   }
 
   return (
@@ -66,20 +77,23 @@ function Register() {
       <div className="authBox" id="register">
         <h1>Register</h1>
         <form onSubmit={registerUser}>
-          <input value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Name" />
-          {nameError && <p>{nameError}</p>}
+          <input value={name} name="name" onChange={(e) => setName(e.target.value)} type="text" placeholder="Name" />
           <br />
-          <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
+          <input value={email} name="email" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
           <br />
-          <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
+          <input value={password} name="password" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
           <br />
           <input value={password2} onChange={(e) => setPassword2(e.target.value)} type="password" placeholder="Confirm Password" />
           <br />
-          <input disable={disable} className="btn-primary" type="submit" value="Register"/>
+          <button disabled={disable} className="btn-primary" type="submit">Register</button>
         </form><hr />
           <p>Already have an account? <Link to="/Login">Login</Link></p>
           <br />
-          <p style={{color: 'red'}}>{err}</p>
+          <div style={{color: 'red', maxWidth: 'fit-content'}}>
+            {err.name && <p>{err.name}</p>}
+            {err.email && <p>{err.email}</p>}
+            {err.password && <p>{err.password}</p>}
+          </div>
       </div>
       <Footer />
     </div>
