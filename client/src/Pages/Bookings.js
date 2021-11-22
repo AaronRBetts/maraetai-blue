@@ -44,8 +44,9 @@ function Bookings() {
                         <p><b>Address:</b></p><p>{appointment.userAddress}</p>
                         {appointment.userNotes ? <><p><b>Notes:</b></p><p>{appointment.userNotes}</p></> : <></> }
                       </div>
-                      </div>
-                    <br />
+                      <a className="btn-primary" href="/#services">Re-order</a>
+                    </div>
+                  <br />
                   </>
                 )
                   ) : 

@@ -8,6 +8,7 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Services from './Pages/Services'
 import Navbar from './Components/Navbar'
+import Confirmation from './Components/Confirmation'
 
 const App = () => {
     return(
@@ -22,6 +23,7 @@ const App = () => {
                 <Route path="/login" exact element={<Login />}/>
                 <Route path="/register" exact  element={<Register />} />
                 <Route path="/home" exact  element={<Home />} />
+                <Route path="/confirm" exact  element={<Confirmation />} />
             </Routes>
         </Router>
     )

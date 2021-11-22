@@ -45,10 +45,10 @@ const Confirmation = (props) => {
     return (
         <div className="card">
         <div className="authBox">
-            <h1>Confirm Appointment</h1>
+            <h1>Thank you for your order!</h1>
             <div>
                 <hr />
-              <h4>Appointment</h4>
+              <h4>Order Details</h4>
                 <div className="confirmationSection">
                   <p><b>Date:</b></p><p>{props.selectedDay.toLocaleDateString('en-GB', options)}</p>
                   <p><b>Service:</b></p><p>{props.service}</p>

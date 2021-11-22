@@ -204,7 +204,7 @@ input:focus-visible, textarea:focus-visible {
 
 hr {
     margin: 10px;
-    border-radius: 50%;
+    border-radius: 10px;
     border-top: 1px solid rgba(0,0,0,0.15);
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
 }
@@ -475,7 +475,7 @@ input:checked ~ .tab-content {
 }
 
 .footer-clean .social img {
-    width: 100px;
+    height: 1em;
 }
   
 .footer-clean ul a {
