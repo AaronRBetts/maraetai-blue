@@ -73,6 +73,7 @@ h6 {
   cursor: pointer;
   margin-top: 1em;
   margin-bottom: 1em;
+  font-size: 1.3rem;
 }
 .btn-primary:hover {
   background: transparent;
@@ -175,9 +176,6 @@ h6 {
   .nav-links a {
     margin: 0 1rem;
     padding: 0.5rem 0;
-  }
-  .btn-primary {
-    font-size: 1em;
   }
 }
 .nav-logo {

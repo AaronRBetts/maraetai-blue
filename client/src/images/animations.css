@@ -26,6 +26,7 @@
 
 .truckBanner svg {
     z-index: 1;
+    transform: translateY(10vh);
 }
 
 

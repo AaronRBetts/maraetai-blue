@@ -34,17 +34,19 @@ export default function Contact() {
         <div>
             <div className="pageWrapper">
                 <div className="pageText">
-                    <h1>Contact us</h1>
+                    <h1>Contact</h1>
                 </div>
                 <div className="pageBanner">
                 </div>
             </div>
             <div className="contactCard">
                 <div className="contactWrapper">
+                    <h1>Contact us</h1>
+                    <p>Leave us an enquiry and we will get back to you as soon as we can.</p>
                     <form onSubmit={sendMessage}>
                     <input value={from} onChange={(e) => setFrom(e.target.value)} type="text" placeholder="Name" />
                     <br />
-                    <input value={contact} onChange={(e) => setContact(e.target.value)} type="text" placeholder="Preferred contact" />
+                    <input value={contact} onChange={(e) => setContact(e.target.value)} type="text" placeholder="Phone or Email address (preferred contact)" />
                     <br />
                     <textarea rows="5" value={message} onChange={(e) => setMessage(e.target.value)} type="text" placeholder="Leave a message" ></textarea>
                     <br />
