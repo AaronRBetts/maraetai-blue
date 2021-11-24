@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
 import './styles.css'
 import '../App.css'
+import logo from '../images/MB_Logo.svg'
 
 function Login() {
   const [email, setEmail] = useState('')
@@ -35,6 +36,9 @@ function Login() {
     <div className="card auth">
       <div className="authBox" id="login">
         <h1>Login</h1>
+        <img alt="maraetai blue logo" src={logo} style={{width: '50px'}}/>
+        <p>Log in to your account to book your Water tank refill or clean online.</p>
+        <hr /><br /><br />
         <form onSubmit={loginUser}>
           <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
           <br />

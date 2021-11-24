@@ -25,6 +25,12 @@ const Footer = () => {
                             <ul>
                                 <li><Link to="/services">Water Tank Filling</Link></li>
                                 <li><Link to="/services">Water Tank Cleaning</Link></li>
+                                {localStorage.getItem('token') ? 
+                                <li><br /><Link to="/bookings">My bookings</Link></li> :
+                                <><br />
+                                <li><Link to="/bookings">Login</Link></li>
+                                <li><Link to="/bookings">Register</Link></li>
+                                </>}
                             </ul>
                         </div>
                         <div className="item">
@@ -32,6 +38,7 @@ const Footer = () => {
                             <ul>
                                 <li><Link to="/">FAQ</Link></li>
                                 <li><Link to="/">Maraetai Blue</Link></li>
+                                <li><Link to="/">Contact us</Link></li>
                             </ul>
                         </div>
                         <div className="item social">

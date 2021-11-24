@@ -2,6 +2,7 @@ import './styles.css'
 import '../App.css'
 import React, { useState, useEffect, useRef } from 'react';
 import {Link} from 'react-router-dom'
+import logo from '../images/MB_Logo.svg'
 
 function Register() {
   const [name, setName] = useState('')
@@ -75,6 +76,9 @@ function Register() {
     <div className="card auth">
       <div className="authBox" id="register">
         <h1>Register</h1>
+        <img alt="maraetai blue logo" src={logo} style={{width: '50px'}}/>
+        <p>Create an account to book your Water tank refill or clean online.</p>
+        <hr /><br /><br />
         <form onSubmit={registerUser}>
           <input value={name} name="name" onChange={(e) => setName(e.target.value)} type="text" placeholder="Name" />
           <br />
@@ -88,7 +92,7 @@ function Register() {
         </form><hr />
           <p>Already have an account? <Link to="/Login">Login</Link></p>
           <br />
-          <div style={{color: 'red', maxWidth: 'fit-content'}}>
+          <div style={{color: 'red', maxWidth: 'fit-content', margin: 'auto'}}>
             {err.name && <p>{err.name}</p>}
             {err.email && <p>{err.email}</p>}
             {err.password && <p>{err.password}</p>}

@@ -15,7 +15,6 @@
 }
 
 .truckBanner {
-    background-color: white;
     display: flex;
     position: absolute;
     top: 128px;

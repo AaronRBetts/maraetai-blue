@@ -12,6 +12,7 @@
 }
 
 .card#services {
+    padding-top: 200px;
     padding-bottom: 10vh;
 }
 
@@ -252,7 +253,7 @@ input:focus-visible, textarea:focus-visible {
     background-image: url('../../src/images/pohutukawa\ coast.jpg');
     background-attachment: fixed;
     width: 100%;
-    margin-bottom: 18vh;
+    margin-bottom: 9vh;
     background-size: cover;
 }
 
