@@ -9,7 +9,6 @@
     display: flex;
     flex-wrap: wrap;
     background-image: url('../../src/images/MB_background.jpg');
-    min-height: 80vh;
 }
 
 .card#services {
@@ -20,7 +19,6 @@
     display: flex;
     flex-wrap: wrap;
     background-image: url('../../src/images/MB_background.jpg');
-    min-height: calc(100vh - 66px);
 }
 
 @media screen and (max-width: 768px) {
@@ -37,7 +35,7 @@
     display: flex;
     flex-wrap: wrap;
     background-image: url('../../src/images/MB_background_alt.jpg');
-    padding-top: 30vh;
+    padding-top: 20vh;
 }
 
 .bookingsCard {
@@ -192,6 +190,29 @@ input:focus-visible, textarea:focus-visible {
     margin: 0 auto 2em;
 }
 
+.contactWrapper {
+    display: flow-root;
+    max-width: 1000px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+    padding: 5vh 10vw;
+    background-color: rgba(255,255,255,1);
+    text-align: left;
+    margin: auto;
+    width: 80%;
+}
+
+.contactCard {
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url('../../src/images/MB_background_alt.jpg');
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+}
+
+.contactWrapper input, .contactWrapper textarea {
+    width: 100%;
+}
+
 .bookingsWrapper {
     display: flow-root;
     max-width: 1000px;
@@ -202,12 +223,6 @@ input:focus-visible, textarea:focus-visible {
     margin: 0 auto 2em;
 }
 
-hr {
-    margin: 10px;
-    border-radius: 10px;
-    border-top: 1px solid rgba(0,0,0,0.15);
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
-}
 
 .vr {
     width: 0px;
@@ -233,6 +248,7 @@ hr {
 
 .landingWrapper {
     display: flex;
+    background-color: white;
 }
 
 .landingBanner {
@@ -267,9 +283,9 @@ hr {
 }
 
 .pageText {
-    height: 40vh;
+    height: 30vh;
     z-index: 2;
-    padding-top: 140px;
+    padding-top: 120px;
     padding-right: 20px;
     padding-left: 5vw;
     margin: 0px;
@@ -301,6 +317,27 @@ hr {
 }
 
 @media screen and (max-width: 768px) {
+    .pageText h1 {
+        mix-blend-mode: unset;
+    }
+    .pageWrapper {
+        display: flex;
+        position: initial;
+    }
+    
+    .pageBanner {
+        background-image: url('../../src/images/pohutukawa\ coast.jpg');
+    }
+    
+    .pageText {
+        z-index: 2;
+        padding-top: 140px;
+        padding-right: 20px;
+        padding-left: 5vw;
+        margin: 0px;
+        width: 800px;
+        background-color: white;
+    }
     .landingBanner {
         display: none;
     }

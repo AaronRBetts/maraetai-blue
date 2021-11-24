@@ -1,7 +1,6 @@
 import React, {  useEffect, useState } from 'react'
 import './styles.css'
 import '../App.css'
-import Footer from '../Components/Footer'
 import Appointment from '../Components/Appointment'
 import Service from '../Components/Service'
 import Info from '../Components/Info'
@@ -79,7 +78,6 @@ function Home() {
         <div>
           <Landing />
           {renderForm()}
-            <Footer />
         </div>
     )
 }

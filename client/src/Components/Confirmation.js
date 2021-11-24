@@ -43,7 +43,7 @@ const Confirmation = (props) => {
     }
 
     return (
-        <div className="card">
+      <div className="card">
         <div className="authBox">
             <h1>Thank you for your order!</h1>
             <div>
@@ -67,8 +67,8 @@ const Confirmation = (props) => {
                 </div>
             </div>
 
-            </div>
-        </div>
+          </div>
+      </div>
     )
 }
 

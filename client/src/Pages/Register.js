@@ -1,7 +1,6 @@
 import './styles.css'
 import '../App.css'
 import React, { useState, useEffect, useRef } from 'react';
-import Footer from '../Components/Footer'
 import {Link} from 'react-router-dom'
 
 function Register() {
@@ -95,7 +94,6 @@ function Register() {
             {err.password && <p>{err.password}</p>}
           </div>
       </div>
-      <Footer />
     </div>
   );
 }

@@ -8,23 +8,27 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Services from './Pages/Services'
 import Navbar from './Components/Navbar'
+import Footer from './Components/Footer'
 import Confirmation from './Components/Confirmation'
+import ScrollToTop from './Components/ScrollToTop'
 
 const App = () => {
     return(
         <Router>
+            <ScrollToTop />
             <Navbar />
             <Routes>
                 <Route path="/" exact element={<Home />}/>
-                <Route path="/bookings" exact element={<Bookings />}/>
-                <Route path="/services" exact element={<Services />}/>
-                <Route path="/about" exact element={<About />}/>
-                <Route path="/contact" exact element={<Contact />}/>
-                <Route path="/login" exact element={<Login />}/>
-                <Route path="/register" exact  element={<Register />} />
-                <Route path="/home" exact  element={<Home />} />
-                <Route path="/confirm" exact  element={<Confirmation />} />
+                <Route path="/bookings" element={<Bookings />}/>
+                <Route path="/services" element={<Services />}/>
+                <Route path="/about" element={<About />}/>
+                <Route path="/contact" element={<Contact />}/>
+                <Route path="/login" element={<Login />}/>
+                <Route path="/register"  element={<Register />} />
+                <Route path="/home"  element={<Home />} />
+                <Route path="/confirm"  element={<Confirmation />} />
             </Routes>
+            <Footer />
         </Router>
     )
 }

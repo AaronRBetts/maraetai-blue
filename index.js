@@ -4,6 +4,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 const User = require('./models/user.model')
 const Appointment = require('./models/appointment.model')
+const ContactMessage = require('./models/contactMessage.model')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const path = require('path');
@@ -75,6 +76,26 @@ app.post('/api/login', async (req,res) => {
         return res.json({ status: 'ok', user: token, redirect: '/' })
     }
     res.json({ status: 'error', error: 'Invalid username/password' })
+})
+
+app.post('/api/contact', async (req,res) => {
+    const { from, contact, message } = req.body
+
+    var response = {
+        success: false, 
+    }
+
+    try {
+        await ContactMessage.create({
+            userName: from,
+            userContact: contact,
+            message: message
+        })
+        response = { success: true, redirect: '/' }
+    } catch (err) {
+        console.log(err)
+    }
+    return res.json(response)
 })
 
 app.post('/api/book', async (req,res) => {

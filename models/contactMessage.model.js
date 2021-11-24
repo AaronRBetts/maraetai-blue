@@ -2,8 +2,7 @@ const mongoose = require('mongoose')
 
 const ContactMessage = new mongoose.Schema({
     userName: { type: String, required: true },
-    userEmail: { type: String, required: true },
-    userPhone: { type: String },
+    userContact: { type: String, required: true },
     message: { type: String, required: true },
     createdAt: { type: Date, default: Date.now },
     },

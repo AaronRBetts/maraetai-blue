@@ -1,7 +1,6 @@
 import React from 'react'
 import './styles.css'
 import '../images/animations.css'
-import Footer from '../Components/Footer'
 import '../App.css'
 import logo from '../images/MB_Logo.svg'
 
@@ -32,7 +31,6 @@ export default function About() {
                     </div>
                 </div>
             </div>
-            <Footer />
         </div>
     )
 }

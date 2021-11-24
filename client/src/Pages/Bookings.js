@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import './styles.css'
 import '../App.css'
-import Footer from '../Components/Footer'
 import logo from '../images/MB_Logo_alt.svg'
 
 function Bookings() {
@@ -22,7 +21,6 @@ function Bookings() {
       .then(data => setAppointments(data))
       }, [])
       
-      
 
     return (
         <div>
@@ -35,7 +33,7 @@ function Bookings() {
                   <div className="headerBanner">
                     <h2>{appointment.service}<br /></h2>
                     <img alt="maraetai blue logo" src={logo}/>
-                    <h5>{appointment.date}</h5>
+                    <h5>{new Date(appointment.date).toLocaleDateString('en-GB', options)}</h5>
                   </div>
                   <div className="appointmentWrapper">
                       <div className="confirmationSection" style={{textAlign: 'Left'}}>
@@ -54,9 +52,8 @@ function Bookings() {
                 }
                 </div>
             </div>
-            </div>
-            <Footer />
-        </div>
+          </div>
+      </div>
     )
 }
 

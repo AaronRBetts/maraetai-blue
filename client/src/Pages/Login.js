@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'
-import Footer from '../Components/Footer'
 import './styles.css'
 import '../App.css'
 
@@ -42,11 +41,13 @@ function Login() {
           <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
           <br />
           <input className="btn-primary" type="submit" value="Login"/>
+          <p>
+          <a href="/">Forgot password</a>
+          </p>
           <br /><hr />
           <p>Don't have an account? <Link to="/Register">Register</Link></p>
         </form>
       </div>
-      <Footer />
     </div>
   );
 }

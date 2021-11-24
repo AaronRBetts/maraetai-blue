@@ -15,6 +15,7 @@
 }
 
 .truckBanner {
+    background-color: white;
     display: flex;
     position: absolute;
     top: 128px;
@@ -60,7 +61,7 @@
 @media screen and (max-width: 768px) {
 
     .truckBanner {
-        bottom: -10vh;
+        bottom: 0;
         top: unset;
     }
     
