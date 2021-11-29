@@ -40,12 +40,13 @@ const Confirmation = (props) => {
 
     function processAppointment(data) {
       console.log('process appointment')
+      props.setFormStep(5);
     }
 
     return (
       <div className="card">
         <div className="authBox">
-            <h1>Thank you for your order!</h1>
+            <h1>Your order</h1>
             <div>
                 <hr />
               <h4>Order Details</h4>

@@ -21,6 +21,7 @@ const Service =(props) => {
     <>
         <div className="card" id="services">
             <div className="authBox">
+                <h2>Welcome, {props.user ? props.user.name : 'Guest'}</h2><hr />
                 <div className="servicesBox">
                     <div className="tabs">
                         <div className="tab">

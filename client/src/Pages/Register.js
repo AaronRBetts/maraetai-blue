@@ -7,6 +7,8 @@ import logo from '../images/MB_Logo.svg'
 function Register() {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
+  const [phone, setPhone] = useState('')
+  const [address, setAddress] = useState('')
   const [password, setPassword] = useState('')
   const [password2, setPassword2] = useState('')
   const [err, setErr] = useState({})
@@ -61,6 +63,8 @@ function Register() {
         body: JSON.stringify({
           name, 
           email, 
+          phone, 
+          address, 
           password,
           password2
         })
@@ -83,6 +87,10 @@ function Register() {
           <input value={name} name="name" onChange={(e) => setName(e.target.value)} type="text" placeholder="Name" />
           <br />
           <input value={email} name="email" onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Email" />
+          <br />
+          <input value={phone} name="phone" onChange={(e) => setPhone(e.target.value)} type="tel" placeholder="Phone" />
+          <br />
+          <input value={address} name="address" onChange={(e) => setAddress(e.target.value)} type="text" placeholder="Physical address" />
           <br />
           <input value={password} name="password" onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
           <br />

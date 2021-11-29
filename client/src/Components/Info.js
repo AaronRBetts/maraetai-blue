@@ -51,7 +51,7 @@ const Info = (props) => {
             <h1>Info</h1>
             <div className="infoBox">
                 <br />
-                <input value={props.userPhone} onChange={(e) => props.setUserPhone(e.target.value)} type="text" placeholder="Phone" />
+                <input value={props.userPhone} onChange={(e) => props.setUserPhone(e.target.value)} type="text" placeholder='Phone' />
                 <br />
                 <input value={props.userAddress} onChange={(e) => props.setUserAddress(e.target.value)} type="text" placeholder="Address" />
                 <br />

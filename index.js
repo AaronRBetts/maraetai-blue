@@ -21,7 +21,7 @@ mongoose.connect(process.env.LOGINMONGODB_URI,
     })
 
 app.post('/api/register', async (req,res) => {
-    const { name, email, password, password2 } = req.body
+    const { name, email, phone, address, password, password2 } = req.body
 
     var response = {
         success: false, 
@@ -44,6 +44,8 @@ app.post('/api/register', async (req,res) => {
         await User.create({
             name: name,
             email: email,
+            phone: phone,
+            address: address,
             password: pass
         })
         response = { success: true, redirect: '/login' }
@@ -71,6 +73,8 @@ app.post('/api/login', async (req,res) => {
         const token = jwt.sign({
             name: user.name,
             email: user.email,
+            phone: user.phone,
+            address: user.address,
         }, process.env.TOKEN_SECRET)
 
         return res.json({ status: 'ok', user: token, redirect: '/' })

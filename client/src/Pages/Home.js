@@ -7,6 +7,7 @@ import Info from '../Components/Info'
 import Confirmation from '../Components/Confirmation'
 import Size from '../Components/Size'
 import Landing from '../Components/Landing'
+import Post from '../Components/Post'
 
 function Home() {
     const [formStep, setFormStep] = useState(0)
@@ -28,25 +29,33 @@ function Home() {
           })
         })
        .then(data => data.json())
-       .then(data => data.error ? '' : setUser(data))
+       .then(data => data.error ? console.log('error logging in') : setUser(data))
+       .then(console.log(user))
+       .then(setUserPhone(user.phone))
+       .then(setUserAddress(user.address))
       }, [])
 
     function renderForm() {
       switch (formStep) {
         case 0:
-          return <Service setService={setService} setFormStep={setFormStep}/>
+          return <Service 
+          user={user}
+          setService={setService} 
+          setFormStep={setFormStep}/>
         case 1:
           return <Size setFormStep={setFormStep} 
           user={user}
           />
         case 2:
-          return <Appointment setFormStep={setFormStep} 
+          return <Appointment 
+          setFormStep={setFormStep} 
           user={user}
           setSelectedDay={setSelectedDay}
           selectedDay={selectedDay}
           />
         case 3:
           return <Info 
+          user={user}
           setFormStep={setFormStep} 
           userPhone={userPhone}
           setUserPhone={setUserPhone}
@@ -62,13 +71,18 @@ function Home() {
           service={service}
           selectedDay={selectedDay}
           userPhone={userPhone}
-          setUserPhone={setUserPhone}
           userAddress={userAddress}
-          setUserAddress={setUserAddress}
           userNotes={userNotes}
-          setUserNotes={setUserNotes}
           />
-      
+        case 5:
+          return <Post 
+          user={user} 
+          service={service}
+          selectedDay={selectedDay}
+          userPhone={userPhone}
+          userAddress={userAddress}
+          userNotes={userNotes}
+          />
         default:
           break;
       }
