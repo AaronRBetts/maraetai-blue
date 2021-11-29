@@ -251,6 +251,10 @@ input:focus-visible, textarea:focus-visible {
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
 }
 
+.calendar h3 {
+    margin: 0;
+}
+
 .landingWrapper {
     display: flex;
     background-color: white;
@@ -491,6 +495,7 @@ input:checked ~ .tab-content {
 }
 
 .footer-clean {
+    box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.3);
     padding:50px 10px;
     background-color: #1f687a;
     color: #ffffff;

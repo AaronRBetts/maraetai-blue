@@ -22,18 +22,18 @@ export default function Scheduler(props) {
   }
 
     return (
-      <div>
+      <div className="calendar">
         <DayPicker 
           showOutsideDays
           selectedDays={props.selectedDay}
           onDayClick={handleDayClick}
           disabledDays={{ before: today }}
         />
-        <h5>
+        <h3>
           {props.selectedDay
             ? props.selectedDay.toLocaleDateString('en-GB', options)
             : 'Choose a date on the calendar'}
-        </h5>
+        </h3>
         <div className="apptButtons">
           <input className="btn-primary" type="submit" value="Continue" onClick={nextStep}/>
           <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
