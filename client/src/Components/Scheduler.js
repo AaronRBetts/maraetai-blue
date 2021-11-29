@@ -34,7 +34,6 @@ export default function Scheduler(props) {
             ? props.selectedDay.toLocaleDateString('en-GB', options)
             : 'Choose a date on the calendar'}
         </h5>
-        <br />
         <div className="apptButtons">
           <input className="btn-primary" type="submit" value="Continue" onClick={nextStep}/>
           <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>

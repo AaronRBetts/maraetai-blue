@@ -14,7 +14,8 @@ export default function Services() {
                 <div className="pageBanner">
                 </div>
             </div>
-            <div className="servicesCard" id="fill">
+            <div className="servicesCard">
+                <a class="anchor" id="fill"></a>
                 <div className="servicesWrapper">
                     <h1>Water tank refill service</h1>
                     <div className="servicesBox">
@@ -28,7 +29,8 @@ export default function Services() {
                         </p>
                     </div>
                 </div>
-                <div className="servicesWrapper" id="clean">
+                <a class="anchor" id="clean"></a>
+                <div className="servicesWrapper">
                     <h1>Water tank cleaning service</h1>
                     <div className="servicesBox">
                         <h3>

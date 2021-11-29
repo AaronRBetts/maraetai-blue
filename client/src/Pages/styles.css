@@ -6,14 +6,10 @@
 }
 
 .card {
+    padding-top: 20vh;
     display: flex;
     flex-wrap: wrap;
     background-image: url('../../src/images/MB_background.jpg');
-}
-
-.card#services {
-    padding-top: 200px;
-    padding-bottom: 10vh;
 }
 
 .auth {
@@ -80,6 +76,13 @@ input:focus-visible, textarea:focus-visible {
     background-color: rgba(255,255,255,1);
 }
 
+.anchor {
+    display: block;
+    position: relative;
+    top: -100px;
+    visibility: hidden;
+}
+
 .authBox {
     display: flow-root;
     width: fit-content;
@@ -88,6 +91,7 @@ input:focus-visible, textarea:focus-visible {
     background-color: rgba(255,255,255,1);
     text-align: center;
     margin: auto;
+    min-width: 50vw;
     min-height: 460px;
     z-index: 10;
     margin-bottom: 5vh;
@@ -142,8 +146,11 @@ input:focus-visible, textarea:focus-visible {
     opacity: 80%;
 }
 
+.infoBox {
+    display: grid;
+}
+
 .infoBox input, .infoBox textarea {
-    min-width: 400px;
 }
 
 #login, #register {
@@ -343,7 +350,7 @@ input:focus-visible, textarea:focus-visible {
     .servicesBox .btn-primary {
         display: flex;
         font-size: 0.8em;
-        margin: auto;
+        margin: 1em auto auto auto;
         width: 100%;
     }
 

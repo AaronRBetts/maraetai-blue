@@ -19,7 +19,7 @@ const Service =(props) => {
 
     return (
     <>
-        <div className="card" id="services">
+        <div className="card">
             <div className="authBox">
                 <h2>Welcome, {props.user ? props.user.name : 'Guest'}</h2><hr />
                 <div className="servicesBox">

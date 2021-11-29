@@ -30,7 +30,6 @@ function Home() {
         })
        .then(data => data.json())
        .then(data => data.error ? console.log('error logging in') : setUser(data))
-       .then(console.log(user))
        .then(setUserPhone(user.phone))
        .then(setUserAddress(user.address))
       }, [])
@@ -91,6 +90,7 @@ function Home() {
     return (
         <div>
           <Landing />
+          <a id="services" className="anchor"></a>
           {renderForm()}
         </div>
     )
