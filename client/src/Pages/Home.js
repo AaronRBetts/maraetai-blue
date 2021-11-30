@@ -29,10 +29,14 @@ function Home() {
           })
         })
        .then(data => data.json())
-       .then(data => data.error ? console.log('error logging in') : setUser(data))
-       .then(setUserPhone(user.phone))
-       .then(setUserAddress(user.address))
+       .then(data => data.error ? console.log('error logging in') : login(data))
       }, [])
+
+    function login(user) {
+      setUser(user)
+      setUserPhone(user.phone)
+      setUserAddress(user.address)
+    }
 
     function renderForm() {
       switch (formStep) {
