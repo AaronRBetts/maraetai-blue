@@ -30,7 +30,7 @@ function Home() {
         })
        .then(data => data.json())
        .then(data => data.error ? console.log('error logging in') : login(data))
-      }, [])
+    }, [])
 
     function login(user) {
       setUser(user)

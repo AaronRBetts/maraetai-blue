@@ -7,6 +7,7 @@ import Bookings from './Pages/Bookings'
 import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Services from './Pages/Services'
+import Profile from './Pages/Profile'
 import Navbar from './Components/Navbar'
 import Footer from './Components/Footer'
 import Confirmation from './Components/Confirmation'
@@ -20,6 +21,7 @@ const App = () => {
             <Routes>
                 <Route path="/" exact element={<Home />}/>
                 <Route path="/bookings" element={<Bookings />}/>
+                <Route path="/profile" element={<Profile />}/>
                 <Route path="/services" element={<Services />}/>
                 <Route path="/about" element={<About />}/>
                 <Route path="/contact" element={<Contact />}/>

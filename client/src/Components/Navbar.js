@@ -33,29 +33,39 @@ export default class Navbar extends Component {
                 </div>
                 <div className="nav-center">
                     <ul className={this.state.isOpen? "nav-links show-nav": "nav-links"} onClick={this.handleToggleNav}>
-                            <li>
-                                <Link to="/">Home</Link>
-                            </li>
-                            <li>
-                                <Link to="/services">Services</Link>
-                            </li>
-                            <li>
-                                <Link to="/about">About us</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">Contact us</Link>
-                            </li>
-                        {localStorage.getItem('token') ? 
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        {localStorage.getItem('token') &&
                         <>
                             <div className="vr"></div>
                             <li>
                                 <Link to="/bookings">My bookings</Link>
-                            </li><div className="vr"></div>
+                            </li>
+                            <li>
+                                <Link to="/profile">Profile</Link>
+                            </li>
+                            <div className="vr"></div>
+                        </>
+                        }
+                        <li>
+                            <Link to="/services">Services</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">About us</Link>
+                        </li>
+                        <li>
+                            <Link to="/contact">Contact us</Link>
+                        </li>
+                        {localStorage.getItem('token') ? 
+                        <>
                             <li>
                                 <Link to="/home" onClick={logout}>Logout</Link>
                             </li>        
-                        </> :
-                        <><div className="vr"></div>
+                        </> 
+                        :
+                        <>
+                            <div className="vr"></div>
                             <li>
                                 <Link to="/Login">Login</Link>
                             </li>

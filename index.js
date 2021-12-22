@@ -55,6 +55,25 @@ app.post('/api/register', async (req,res) => {
     res.json(response)
 })
 
+app.put('/api/update', async (req,res) => {
+    const { name, email, phone, address } = req.body
+    var conditions = { email: email }
+
+    try {
+        await User.updateOne(conditions, {$set: {
+            name: name,
+            phone: phone,
+            address: address,
+        }})
+        response = { 
+            success: true, redirect: '/profile' 
+        }
+    } catch (err) {
+        response = { error: err }
+    }
+    res.json(response)
+})
+
 app.post('/api/change-password', (req,res) => {
     const { token } = req.body
 
@@ -119,7 +138,7 @@ app.post('/api/book', async (req,res) => {
 
     try {
         await Appointment.create({
-            date: date,
+            date: new Date(date),
             service: service,
             userName: userName,
             userEmail: userEmail,
