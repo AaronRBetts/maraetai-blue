@@ -25,7 +25,7 @@ const Service =(props) => {
                 <div className="servicesBox">
                     <div className="tabs">
                         <div className="tab">
-                            <h1>Tank Fill</h1>
+                            <h1>Water Delivery</h1>
                             <img className="logo" alt="maraetai blue logo" src={fill}/>
                             <div className="tab-content">
                                 <div className="servicesBtnWrapper">

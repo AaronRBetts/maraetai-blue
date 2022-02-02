@@ -26,9 +26,9 @@ function Bookings() {
       <div>
         <div className="bookingsCard">
           <div className="bookingsWrapper">
-            <h1>Upcoming Appointments</h1>
+            <h1>Your Appointments</h1>
             <div className="appointmentsWrapper">
-              {appointments.filter(a => a.date >= today) ? appointments.filter(a => a.date.getTime >= today).map((appointment, i) => (
+              {appointments.filter(a => a.date >= today) ? appointments/*.filter(a => a.date.getTime >= today)*/.map((appointment, i) => (
               <div key={i}>
                 <div className="headerBanner">
                   <h2>{appointment.service}<br /></h2>
@@ -51,7 +51,7 @@ function Bookings() {
                 <h3>You have no upcoming appointments.</h3>  
               }
             </div>
-            <h1>Past Appointments</h1>
+            {/* <h1>Past Appointments</h1>
             <div className="appointmentsWrapper">
             {appointments.filter(a => a.date.getTime <= today) ? appointments.filter(a => a.date.getTime <= today).map((appointment, i) => (
               <div key={i}>
@@ -75,7 +75,7 @@ function Bookings() {
               ) : 
                 <h3>You have no past appointments.</h3>  
               }
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

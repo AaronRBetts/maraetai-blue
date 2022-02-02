@@ -15,7 +15,7 @@ const Footer = () => {
                             <h3>Contact</h3>
                             <ul>
                                 <p><b>Tank Refill</b></p>
-                                <li><FaPhone /> 027 536 6437 <br /> Colleen &amp; Warren</li><br />
+                                <li><FaPhone /> 027 536 6437 <br /> Rosemary</li><br />
                                 <p><b>Tank Clean</b></p>
                                 <li><FaPhone /> 021 0298 4170 <br /> Jacob</li>
                             </ul>
