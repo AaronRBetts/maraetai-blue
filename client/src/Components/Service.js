@@ -19,9 +19,7 @@ const Service =(props) => {
 
     return (
     <>
-        <div className="card">
-            <div className="authBox">
-                <h2>Welcome, {props.user ? props.user.name : 'Guest'}</h2><hr />
+                <h2>Select a service</h2><hr />
                 <div className="servicesBox">
                     <div className="tabs">
                         <div className="tab">
@@ -48,8 +46,6 @@ const Service =(props) => {
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
     </>
     )
 }

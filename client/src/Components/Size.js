@@ -23,9 +23,7 @@ function Size(props) {
     props.setFormStep(0);
   }
 
-    return (
-        <div className="card">
-        <div className="authBox">
+    return (<>
             <h1>Tank refill size</h1>
             <div className="servicesBox">
                 <button className="btn-primary" type="submit" value="5k Litres" onClick={handleClick}><p>5k Litres</p><img alt="small truck" src={TruckS} /></button>
@@ -33,9 +31,7 @@ function Size(props) {
                 <button className="btn-primary" type="submit" value="14k Litres" onClick={handleClick}><p>14k Litres</p><img alt="large truck" src={TruckL} /></button><hr />
             </div>
           <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
-
-          </div>
-        </div>
+</>
     )
 }
 

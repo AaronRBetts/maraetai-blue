@@ -71,8 +71,8 @@ h6 {
   transition: var(--mainTransition);
   text-transform: uppercase;
   cursor: pointer;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
   font-size: 1.3rem;
 }
 .btn-primary:hover {
@@ -113,7 +113,7 @@ h6 {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0);
 }
 .nav-logo {
-  width: 64px;
+  width: 128px;
 }
 .nav-header {
   display: flex;
@@ -183,7 +183,7 @@ h6 {
   }
 }
 .nav-logo {
-  width: 64px;
+  width: 128px;
 }
 
 .landingText b {
