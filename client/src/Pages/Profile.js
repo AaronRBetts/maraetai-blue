@@ -1,7 +1,6 @@
 import React, {  useEffect, useState } from 'react'
 import './styles.css'
 import '../App.css'
-import logo from '../images/MB_Logo.svg'
 
 const Profile = () => {
     const [user, setUser] = useState('')
@@ -48,8 +47,13 @@ const Profile = () => {
       const data = await response.json();
       console.log('updated')
   
-      data.success ? window.location = data.redirect : console.log(data.error)
+      data.success ? logout() : console.log(data.error)
     }
+
+    function logout() {
+      localStorage.removeItem('token')
+      window.location = "/login";
+  }
 
     return (
       <div className="card">

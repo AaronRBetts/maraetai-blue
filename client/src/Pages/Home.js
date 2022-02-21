@@ -6,6 +6,7 @@ import Service from '../Components/Service'
 import Info from '../Components/Info'
 import Confirmation from '../Components/Confirmation'
 import Size from '../Components/Size'
+import Location from '../Components/Location'
 import Landing from '../Components/Landing'
 import Post from '../Components/Post'
 
@@ -13,6 +14,8 @@ function Home() {
     const [formStep, setFormStep] = useState(0)
     const [user, setUser] = useState('')
     const [service, setService] = useState('')
+    const [location, setLocation] = useState('')
+    const [size, setSize] = useState('')
     const [selectedDay, setSelectedDay] = useState('')
     const [userPhone, setUserPhone] = useState('')
     const [userAddress, setUserAddress] = useState('')
@@ -46,17 +49,25 @@ function Home() {
           setService={setService} 
           setFormStep={setFormStep}/>
         case 1:
-          return <Size setFormStep={setFormStep} 
+          return <Location setFormStep={setFormStep} 
+          setLocation={setLocation}
+          location={location}
           user={user}
           />
         case 2:
+          return <Size setFormStep={setFormStep} 
+          user={user}
+          setSize={setSize}
+          size={size}
+          />
+        case 3:
           return <Appointment 
           setFormStep={setFormStep} 
           user={user}
           setSelectedDay={setSelectedDay}
           selectedDay={selectedDay}
           />
-        case 3:
+        case 4:
           return <Info 
           user={user}
           setFormStep={setFormStep} 
@@ -67,7 +78,7 @@ function Home() {
           userNotes={userNotes}
           setUserNotes={setUserNotes}
           />
-        case 4:
+        case 5:
           return <Confirmation 
           setFormStep={setFormStep} 
           user={user} 
@@ -77,7 +88,7 @@ function Home() {
           userAddress={userAddress}
           userNotes={userNotes}
           />
-        case 5:
+        case 6:
           return <Post 
           user={user} 
           service={service}

@@ -125,6 +125,8 @@ app.post('/api/book', async (req,res) => {
     const { 
         date,
         service,
+        size,
+        location,
         userName,
         userEmail,
         userPhone,
@@ -140,6 +142,8 @@ app.post('/api/book', async (req,res) => {
         await Appointment.create({
             date: new Date(date),
             service: service,
+            size: size,
+            location: location,
             userName: userName,
             userEmail: userEmail,
             userPhone: userPhone,
@@ -163,7 +167,7 @@ app.post('/api/bookings', /*ensureAuth,*/ async (req,res) => {
         //     const appointments = await Appointment.find()
         // } else {
         // }
-        const appointments = await Appointment.find({ userEmail: user.email })
+        const appointments = await Appointment.find({ userEmail: user.email }).sort({date: -1})
         console.log(appointments)
         console.log(user)
         // appointments = appointments.filter(function (appt){

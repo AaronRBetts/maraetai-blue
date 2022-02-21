@@ -4,7 +4,6 @@ import '../App.css'
 import { FaPhone, FaFacebook, FaTwitter } from 'react-icons/fa'
 import {Link} from 'react-router-dom'
 import '../Pages/styles.css'
-import logo from '../images/MB_Logo_alt.svg'
 
 const Footer = () => {
     return (
@@ -45,7 +44,6 @@ const Footer = () => {
                             <Link to="#https://www.facebook.com/maraetaiblue"><FaFacebook /></Link>
                             <Link to="https://twitter.com/maraetaiblue?lang=fi"><FaTwitter /></Link>
                             <p className="copyright">Maraetai Blue © 2021</p>
-                            <img alt="maraetai blue logo" src={logo}/>
                             <p className="copyright">Website from <a href="https://funnelweb.nz/">Funnel Web</a> &amp; <a href="https://AaronRBetts.github.io/">Aaron Betts</a></p>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../Pages/styles.css'
 import '../App.css'
 
@@ -30,11 +30,11 @@ const Info = (props) => {
   }
 
     function backStep() {
-      props.setFormStep(2);
+      props.setFormStep(3);
     }
 
     function nextStep() {
-      props.setFormStep(4);
+      props.setFormStep(5);
     }
 
     return (

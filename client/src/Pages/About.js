@@ -26,8 +26,8 @@ export default function About() {
                             Jacob believes in personal service and going the extra mile for his customers. His attention to detail and quality workmanship are second to none. 
                             <br/><br/>
                             The water we provide is high standard, Ministry of Health approved, pristine drinking water. Sourced from Ministry of Heath Approved suppliers and delivered in stainless steel tanks that are all individually tested and meet national food grade hygiene standards. Whether you are commercial or residential our water will live up to all expectations . <br /><br />
-                            <b>Clean and pure, Maraetai Blue water.</b><img alt="maraetai blue logo" src={logo} style={{transform: 'translateY(0.5em)'}}/>
-                        </p>
+                            <b>Clean and pure, Maraetai Blue water.</b>
+                        </p><img alt="maraetai blue logo" src={logo} style={{transform: 'translateY(0.5em)'}}/>
                     </div>
                 </div>
             </div>

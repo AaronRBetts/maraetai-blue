@@ -13,11 +13,11 @@ export default function Scheduler(props) {
   }
 
   function backStep() {
-    props.setFormStep(1);
+    props.setFormStep(2);
   }
 
   async function nextStep() {
-    props.user ? props.setFormStep(3) : window.location = '/register'
+    props.user ? props.setFormStep(4) : window.location = '/register'
 
   }
 
