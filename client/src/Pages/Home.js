@@ -51,14 +51,12 @@ function Home() {
         case 1:
           return <Location setFormStep={setFormStep} 
           setLocation={setLocation}
-          location={location}
           user={user}
           />
         case 2:
           return <Size setFormStep={setFormStep} 
           user={user}
           setSize={setSize}
-          size={size}
           />
         case 3:
           return <Appointment 
@@ -83,6 +81,8 @@ function Home() {
           setFormStep={setFormStep} 
           user={user} 
           service={service}
+          size={size}
+          location={location}
           selectedDay={selectedDay}
           userPhone={userPhone}
           userAddress={userAddress}
@@ -92,6 +92,8 @@ function Home() {
           return <Post 
           user={user} 
           service={service}
+          size={size}
+          location={location}
           selectedDay={selectedDay}
           userPhone={userPhone}
           userAddress={userAddress}
@@ -108,11 +110,11 @@ function Home() {
           <a id="services" className="anchor"></a>
           <div className='card'>
             <div className='authBox'>
+              {renderForm()}
               {user ? 
-                    <p>Logged in as {user.name}</p> : 
+                    <p style={{color: 'grey', marginTop: '3em'}}>Logged in as {user.name}</p> : 
                     <p><a href="/login">Log in</a> or <a href="/register">Register</a></p>
                     }
-              {renderForm()}
             </div>
           </div>
         </div>

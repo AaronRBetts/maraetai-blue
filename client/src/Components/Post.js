@@ -14,6 +14,8 @@ const Post = (props) => {
                   <div className="confirmationSection">
                     <p><b>Date:</b></p><p>{props.selectedDay.toLocaleDateString('en-GB', options)}</p>
                     <p><b>Service:</b></p><p>{props.service}</p>
+                    <p><b>Size:</b></p><p>{props.size}</p>
+                    <p><b>Area:</b></p><p>{props.location}</p>
                   </div>
                   <hr />
                 <h4>Your Details</h4>

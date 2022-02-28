@@ -20,6 +20,8 @@ const Confirmation = (props) => {
             body: JSON.stringify({
               date: props.selectedDay,
               service: props.service,
+              location: props.location,
+              size: props.size,
               userName: props.user.name,
               userEmail: props.user.email,
               userPhone: props.userPhone,
@@ -53,6 +55,8 @@ const Confirmation = (props) => {
                 <div className="confirmationSection">
                   <p><b>Date:</b></p><p>{props.selectedDay.toLocaleDateString('en-GB', options)}</p>
                   <p><b>Service:</b></p><p>{props.service}</p>
+                  <p><b>Size:</b></p><p>{props.size}</p>
+                  <p><b>Area:</b></p><p>{props.location}</p>
                 </div>
                 <hr />
               <h4>Your Details</h4>

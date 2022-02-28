@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-function Location(props) {
+const Location = (props) => {
 
   function handleClick(e) {
       e.preventDefault()
@@ -22,8 +22,8 @@ function Location(props) {
       <>
       <h1>Location</h1>
         <div className="servicesBox">
-            <button className="btn-primary" type="submit" value="Maraetai" onClick={handleClick}><p>Maraetai</p></button>
-            <button className="btn-primary" type="submit" value="Beachlands" onClick={handleClick}><p>Beachlands</p></button>
+            <input className="btn-primary" type="submit" value="Maraetai" onClick={handleClick}/>
+            <input className="btn-primary" type="submit" value="Beachlands" onClick={handleClick}/>
         </div>
       <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
 
