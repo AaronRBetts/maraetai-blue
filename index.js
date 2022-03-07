@@ -12,7 +12,6 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const stripe = require("stripe")(process.env.STRIPE_SECRET)
 
-
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
 app.use(cors())

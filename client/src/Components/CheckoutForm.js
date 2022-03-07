@@ -89,12 +89,12 @@ function CheckoutForm(props) {
             </div>
           </fieldset>
           <div className='apptButtons'>
-            <input className='btn-primary' value="pay" type="submit"/><hr />
+            <input className='btn-primary' value="pay" type="submit"/><br />
+          <input className='btn-secondary' onClick={backStep} value="back"/>
           </div> 
         </form> 
-        <div className="apptButtons servicesBox">
-          <input className='btn-secondary' onClick={backStep} value="back"/>
-        </div>
+        {/* <div className="apptButtons servicesBox">
+        </div> */}
       </>
       :
       <div>

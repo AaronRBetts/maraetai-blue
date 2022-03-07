@@ -17,7 +17,7 @@ const Size = (props) => {
             <div className="servicesBox apptButtons">
                 <input className="btn-primary" type="submit" value="5k Litres" onClick={handleClick}/>
                 <input className="btn-primary" type="submit" value="10k Litres" onClick={handleClick}/>
-                <input className="btn-primary" type="submit" value="14k Litres" onClick={handleClick}/><hr />
+                <input className="btn-primary" type="submit" value="14k Litres" onClick={handleClick}/><br />
           <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
             </div>
 </>

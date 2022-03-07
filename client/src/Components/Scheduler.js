@@ -46,7 +46,7 @@ export default function Scheduler(props) {
             : 'Choose a date on the calendar'}
         </h3>
         <div className="apptButtons">
-          <input disabled={disable} className="btn-primary" type="submit" value="Continue" onClick={nextStep}/><hr />
+          <input disabled={disable} className="btn-primary" type="submit" value="Continue" onClick={nextStep}/><br />
           <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
         </div>
       </div>

@@ -12,8 +12,8 @@
 }
 
 .home {
+    min-height: 90vh;
     padding-top: 10vh;
-    display: flex;
     flex-wrap: wrap;
     background-image: url('../../src/images/MB_background.jpg');
 }
@@ -108,7 +108,7 @@ input:focus-visible, textarea:focus-visible {
 .authBox {
     display: flow-root;
     max-width: 800px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
     padding: 5vh 5vw;
     background-color: rgba(255,255,255,1);
     text-align: center;
@@ -134,7 +134,7 @@ input:focus-visible, textarea:focus-visible {
 .servicesForm {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
     padding: 5vh 5vw;
     background-color: rgba(255,255,255,1);
     text-align: center;
@@ -242,7 +242,7 @@ input:focus-visible, textarea:focus-visible {
 .servicesWrapper {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
     padding: 5vh 10vw;
     background-color: rgba(255,255,255,1);
     text-align: left;
@@ -252,7 +252,7 @@ input:focus-visible, textarea:focus-visible {
 .contactWrapper {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
     padding: 5vh 10vw;
     background-color: rgba(255,255,255,1);
     text-align: left;
@@ -305,7 +305,7 @@ input:focus-visible, textarea:focus-visible {
 .bookingsWrapper {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.2);
     padding: 4vh 4vw;
     background-color: rgba(255,255,255,1);
     text-align: left;
@@ -383,9 +383,13 @@ input:focus-visible, textarea:focus-visible {
     width: 100%;
 }
 
+.postOrder a {
+    margin: auto !important;
+}
+
 .DayPicker {
     margin: 2em 1em;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.2);
 }
 
 .calendar h3 {
@@ -550,7 +554,7 @@ input:focus-visible, textarea:focus-visible {
 }
 
 .footer-clean {
-    box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0px 10px 40px rgba(0, 0, 0, 0.2);
     padding:50px 10px;
     background-color: #1f687a;
     color: #ffffff;

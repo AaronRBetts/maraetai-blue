@@ -24,7 +24,7 @@ const Location = (props) => {
         <div className="servicesBox">
             <input className="btn-primary" type="submit" value="Maraetai" onClick={handleClick}/>
             <input className="btn-primary" type="submit" value="Beachlands" onClick={handleClick}/>
-        </div><hr />
+        </div><br />
       <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
 
       </>

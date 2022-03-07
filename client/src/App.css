@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 :root {
-  --primaryColor: #0e748d;
+  --primaryColor: rgb(14, 116, 141);
   --offPrimaryColor: #d4f6ff;
   --secondaryColor: #038713;
   --mainWhite: #fff;
@@ -26,9 +26,9 @@ body {
 }
 hr {
     margin: 10px;
-    border-radius: 10px;
-    border-top: 1px solid rgba(0,0,0,0.15);
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(14,116,141,0.2);
+    border-radius: 50%;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 h1 {
   color: #0e748d;

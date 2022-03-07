@@ -13,7 +13,7 @@ const Service =(props) => {
 
     return (
     <>
-                <h3>Select a service</h3><hr />
+                <h3>Select a service</h3><br />
                 <div className="servicesBox">
                     <div className="tabs">
                         <div className="tab">
@@ -27,7 +27,6 @@ const Service =(props) => {
                             </div>
                         </div>
                         <div className="vr"></div>
-                        <hr />
                         <div className="tab">
                             <h2>Tank Clean</h2>
                             <img className="logo" alt="maraetai blue logo" src={clean}/>

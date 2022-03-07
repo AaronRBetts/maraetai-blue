@@ -47,7 +47,7 @@ const Info = (props) => {
                   <textarea rows="5" value={props.userNotes} onChange={(e) => props.setUserNotes(e.target.value)} type="text" placeholder="Leave us a message" ></textarea>
                   <div className="apptButtons">
                
-                  <input className="btn-primary" type="submit" value="Continue" onClick={nextStep}/><hr />
+                  <input className="btn-primary" type="submit" value="Continue" onClick={nextStep}/><br />
                   <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
                     {/* <button disabled={disable} className='btn-primary' onClick={nextStep}>Continue</button><hr />
                     <button className='btn-secondary' onClick={backStep}>back</button> */}

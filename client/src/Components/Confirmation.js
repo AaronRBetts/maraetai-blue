@@ -50,7 +50,6 @@ const Confirmation = (props) => {
         <div className='confirmationWrapper'>
             <h1>Your order</h1>
             <div>
-                <hr />
               <h4>Order Details</h4>
                 <div className="confirmationSection">
                   <p><b>Date:</b></p><p>{props.selectedDay.toLocaleDateString('en-GB', options)}</p>
@@ -58,13 +57,13 @@ const Confirmation = (props) => {
                   <p><b>Size:</b></p><p>{props.size}</p>
                   <p><b>Area:</b></p><p>{props.location}</p>
                 </div>
-                <hr />
               <h4>Your Details</h4>
                 <div className="confirmationSection">
                   <p><b>Name:</b></p><p>{props.user.name}</p>
                   <p><b>Phone:</b></p><p>{props.userPhone}</p>
                   <p><b>Address:</b></p><p>{props.userAddress}</p>
-                  {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }
+                  {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }<p></p><p></p>
+                  <p><b>Total:</b></p><p><b>$100</b></p>
                 </div>
                 <Payment setFormStep={props.setFormStep} bookAppointment={bookAppointment}/>
                 {/* <div className="apptButtons">

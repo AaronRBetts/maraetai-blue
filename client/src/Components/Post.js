@@ -25,7 +25,7 @@ const Post = (props) => {
                     <p><b>Address:</b></p><p>{props.userAddress}</p>
                     {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }
                   </div>
-                  <div className="apptButtons">
+                  <div className="apptButtons postOrder">
                     <a className="btn-primary" href="/">Home</a>
                   </div>
               </div>
