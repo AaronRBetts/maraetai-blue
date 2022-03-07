@@ -17,7 +17,7 @@ export default function Services() {
             <div className="servicesCard">
                 <div className="servicesWrapper">
                 <a class="anchor" id="fill"></a>
-                    <h1>Water tank refill service</h1>
+                    <h2>Water tank refill service</h2>
                     <div className="servicesBox">
                         <h3>
                             Maraetai Blue supplies clean water to East Auckland households.<br />
@@ -32,7 +32,7 @@ export default function Services() {
                 </div>
                 <a class="anchor" id="clean"></a>
                 <div className="servicesWrapper">
-                    <h1>Water tank cleaning service</h1>
+                    <h2>Water tank cleaning service</h2>
                     <div className="servicesBox">
                         <h3>
                             Maraetai Blue provides a full tank clean and inspection service for East Auckland households.<br />

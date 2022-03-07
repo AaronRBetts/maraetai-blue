@@ -77,10 +77,9 @@ function Register() {
   }
 
   return (
-    <div className="card auth">
+    <div className="card auth servicesCard">
       <div className="authBox" id="register">
         <h1>Register</h1>
-        <img alt="maraetai blue logo" src={logo} style={{width: '50px'}}/>
         <p>Create an account to book your Water tank refill or clean online.</p>
         <hr /><br /><br />
         <form onSubmit={registerUser}>
@@ -96,9 +95,9 @@ function Register() {
           <br />
           <input value={password2} onChange={(e) => setPassword2(e.target.value)} type="password" placeholder="Confirm Password" />
           <br />
-          <button disabled={disable} className="btn-primary" type="submit">Register</button>
+          <button disabled={disable} className="btn-primary" type="submit">Register</button><br /><br />
         </form><hr />
-          <p>Already have an account? <Link to="/Login">Login</Link></p>
+          <p>Already have an account? <Link to="/Login">Login here</Link></p>
           <br />
           <div style={{color: 'red', maxWidth: 'fit-content', margin: 'auto'}}>
             {err.name && <p>{err.name}</p>}

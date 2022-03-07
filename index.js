@@ -1,16 +1,20 @@
-const express = require('express')
+const express = require('express');
 const app = express();
-const cors = require('cors')
-const mongoose = require('mongoose')
-const User = require('./models/user.model')
-const Appointment = require('./models/appointment.model')
-const ContactMessage = require('./models/contactMessage.model')
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcrypt')
-const path = require('path');
-
+const cors = require('cors');
 require('dotenv').config();
+const mongoose = require('mongoose');
+const User = require('./models/user.model');
+const Appointment = require('./models/appointment.model');
+const ContactMessage = require('./models/contactMessage.model');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
+const path = require('path');
+const bodyParser = require('body-parser');
+const stripe = require("stripe")(process.env.STRIPE_SECRET)
 
+
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
 app.use(cors())
 app.use(express.json())
 
@@ -155,6 +159,30 @@ app.post('/api/book', async (req,res) => {
         console.log(err)
     }
     return res.json(response)
+})
+
+app.post('/api/payment', /*ensureAuth,*/cors(), async (req, res) => {
+    let {amount, id} = req.body
+    try {
+        const payment = await stripe.paymentIntents.create({
+            amount,
+            currency: "NZD",
+            description: "Water Delivery",
+            payment_method: id,
+            confirm: true
+        })
+        console.log("Payment", payment)
+        res.json({
+            message: "Payment successful",
+            success: true
+        })
+    } catch (err) {
+        console.log("Error", err);
+        res.json({
+            message: "Payment failed",
+            success: false
+        })
+    }
 })
 
 app.post('/api/bookings', /*ensureAuth,*/ async (req,res) => {

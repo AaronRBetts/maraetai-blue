@@ -6,41 +6,37 @@ import clean from '../images/cleaning.png'
 
 const Service =(props) => {
 
-    function handleClick(e) {
-        e.preventDefault()
-        if (e.target.value === "Book Delivery") {
-            props.setService('Water tank fill')
-            props.setFormStep(1)
-        } 
-        if (e.target.value === "Book Clean") {
-            window.location = '/contact'
-        }
+    function bookDelivery() {
+        props.setService('Water tank fill')
+        props.setFormStep(1)
     }
 
     return (
     <>
-                <h2>Select a service</h2><hr />
+                <h3>Select a service</h3><hr />
                 <div className="servicesBox">
                     <div className="tabs">
                         <div className="tab">
-                            <h1>Water Delivery</h1>
+                            <h2>Water Delivery</h2>
                             <img className="logo" alt="maraetai blue logo" src={fill}/>
                             <div className="tab-content">
                                 <div className="servicesBtnWrapper">
-                                    <input className="btn-primary landing" type="submit" value="Book Delivery" onClick={handleClick}/>
-                                    <a className="btn-secondary landing" type="submit" href="/services">Learn more</a>
+                                    <button className="btn-primary" onClick={bookDelivery}><p>Book Delivery</p></button>
+                                    <button className="btn-secondary"><a href="/services">Learn more</a></button>
                                 </div>
                             </div>
                         </div>
                         <div className="vr"></div>
                         <hr />
                         <div className="tab">
-                            <h1>Tank Clean</h1>
+                            <h2>Tank Clean</h2>
                             <img className="logo" alt="maraetai blue logo" src={clean}/>
                             <div className="tab-content">
                                 <div className="servicesBtnWrapper">
-                                    <input className="btn-primary landing" type="submit" value="Book Clean" onClick={handleClick}/>
-                                    <a className="btn-secondary landing" type="submit" href="/services">Learn more</a>
+                                <div className="servicesBtnWrapper">
+                                <a href="/contact"><button className="btn-primary">Book Clean</button></a>
+                                    <a href="/services"><button className="btn-secondary">Learn more</button></a>
+                                </div>
                                 </div>
                             </div>
                         </div>

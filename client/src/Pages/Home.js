@@ -108,9 +108,11 @@ function Home() {
         <div>
           <Landing />
           <a id="services" className="anchor"></a>
-          <div className='card'>
-            <div className='authBox'>
+          <div className='home'>
+            <div className='servicesForm'>
               {renderForm()}
+              <br />
+              <br />
               {user ? 
                     <p style={{color: 'grey', marginTop: '3em'}}>Logged in as {user.name}</p> : 
                     <p><a href="/login">Log in</a> or <a href="/register">Register</a></p>

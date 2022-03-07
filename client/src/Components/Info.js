@@ -38,8 +38,7 @@ const Info = (props) => {
     }
 
     return (
-        <div className="card">
-          <div className="authBox">
+          <div>
               <h1>Info</h1>
               <div className="infoBox">
                   <br />
@@ -47,8 +46,11 @@ const Info = (props) => {
                   <input value={props.userAddress} onChange={(e) => props.setUserAddress(e.target.value)} type="text" placeholder="Address" />
                   <textarea rows="5" value={props.userNotes} onChange={(e) => props.setUserNotes(e.target.value)} type="text" placeholder="Leave us a message" ></textarea>
                   <div className="apptButtons">
-                  <input disabled={disable} className="btn-primary" type="submit" value="Continue" onClick={nextStep}/>
+               
+                  <input className="btn-primary" type="submit" value="Continue" onClick={nextStep}/><hr />
                   <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
+                    {/* <button disabled={disable} className='btn-primary' onClick={nextStep}>Continue</button><hr />
+                    <button className='btn-secondary' onClick={backStep}>back</button> */}
                   </div>
               </div>
             <div style={{color: 'red', maxWidth: 'fit-content', margin: 'auto'}}>
@@ -57,7 +59,6 @@ const Info = (props) => {
             </div>
 
             </div>
-        </div>
     )
 }
 

@@ -56,7 +56,7 @@ const Profile = () => {
   }
 
     return (
-      <div className="card">
+      <div className="card servicesCard">
         <div className="authBox">
             <h1>Customer Information</h1>
             <p>We use this information to speed up your ordering process.</p>

@@ -1,8 +1,19 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import DayPicker from 'react-day-picker';
 import 'react-day-picker/lib/style.css';
 
 export default function Scheduler(props) {
+  const [disable, setDisabled] = useState(true)
+
+  useEffect(() => {
+    setDisabled(formValidation())
+    
+  }, [props.selectedDay])
+
+  const formValidation = () => {
+    if (props.selectedDay) return false;
+    return true
+  }
 
   const today = new Date();
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -35,7 +46,7 @@ export default function Scheduler(props) {
             : 'Choose a date on the calendar'}
         </h3>
         <div className="apptButtons">
-          <input className="btn-primary" type="submit" value="Continue" onClick={nextStep}/>
+          <input disabled={disable} className="btn-primary" type="submit" value="Continue" onClick={nextStep}/><hr />
           <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
         </div>
       </div>

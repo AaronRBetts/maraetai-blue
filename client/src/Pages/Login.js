@@ -33,10 +33,9 @@ function Login() {
   }
 
   return (
-    <div className="card auth">
+    <div className="card auth servicesCard">
       <div className="authBox" id="login">
         <h1>Login</h1>
-        <img alt="maraetai blue logo" src={logo} style={{width: '50px'}}/>
         <p>Log in to your account to book your Water tank refill or clean online.</p>
         <hr /><br /><br />
         <form onSubmit={loginUser}>
@@ -45,11 +44,11 @@ function Login() {
           <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" placeholder="Password" />
           <br />
           <input className="btn-primary" type="submit" value="Login"/>
+          <br /><br />          
           <p>
           <a href="/">Forgot password</a>
-          </p>
-          <br /><hr />
-          <p>Don't have an account? <Link to="/Register">Register</Link></p>
+          </p><hr />
+          <p>Don't have an account yet? <Link to="/Register">Register here</Link> to schedule your water delivery.</p>
         </form>
       </div>
     </div>

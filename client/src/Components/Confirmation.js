@@ -1,6 +1,7 @@
 import React from 'react'
 import '../Pages/styles.css'
 import '../App.css'
+import Payment from './Payment'
 
 require('dotenv').config();
 
@@ -8,9 +9,8 @@ const Confirmation = (props) => {
   
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-    async function bookAppointment(e) {
+    async function bookAppointment() {
 
-        e.preventDefault()
         try {
           const response = await fetch(`${process.env.REACT_APP_APIURL}/api/book`, {
             method: 'POST',
@@ -47,7 +47,7 @@ const Confirmation = (props) => {
 
     return (
       <div className="card">
-        <div className="authBox">
+        <div className='confirmationWrapper'>
             <h1>Your order</h1>
             <div>
                 <hr />
@@ -66,10 +66,11 @@ const Confirmation = (props) => {
                   <p><b>Address:</b></p><p>{props.userAddress}</p>
                   {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }
                 </div>
-                <div className="apptButtons">
-                <input className="btn-primary" type="submit" value="Confirm" onClick={bookAppointment}/>
-                <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
-                </div>
+                <Payment setFormStep={props.setFormStep} bookAppointment={bookAppointment}/>
+                {/* <div className="apptButtons">
+                  <input className="btn-primary" type="submit" value="Confirm" onClick={bookAppointment}/>
+                  <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
+                </div> */}
             </div>
 
           </div>

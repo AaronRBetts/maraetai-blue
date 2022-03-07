@@ -16,7 +16,7 @@ export default function About() {
             </div>
             <div className="servicesCard" id="fill">
                 <div className="servicesWrapper">
-                    <h1>Maraetai Blue Ltd</h1>
+                    <h2>Maraetai Blue Ltd</h2>
                     <div className="servicesBox">
                         <h3>
                             Maraetai Blue supplies clean water to East Auckland households.<br />

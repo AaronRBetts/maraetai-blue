@@ -6,7 +6,7 @@ const Post = (props) => {
   
     return (
         <div className="card">
-          <div className="authBox">
+          <div>
               <h1>Thank you for your order!</h1>
               <div>
                   <hr />
@@ -26,7 +26,7 @@ const Post = (props) => {
                     {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }
                   </div>
                   <div className="apptButtons">
-                  <a className="btn-primary" href="/">Home</a>
+                    <a className="btn-primary" href="/">Home</a>
                   </div>
               </div>
   

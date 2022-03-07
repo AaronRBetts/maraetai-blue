@@ -66,7 +66,7 @@ export default function Contact() {
             <div className="contactCard">
 
                 <div className="contactWrapper">
-                    <h1>Contact us</h1>
+                    <h2>Contact us</h2>
                     <p>Leave us an enquiry and we will get back to you as soon as we can.</p>
                   {
                     confirmation ? 
