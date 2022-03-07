@@ -134,7 +134,7 @@ input:focus-visible, textarea:focus-visible {
 .servicesForm {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
     padding: 5vh 5vw;
     background-color: rgba(255,255,255,1);
     text-align: center;
@@ -204,6 +204,7 @@ input:focus-visible, textarea:focus-visible {
 }
 
 .infoBox input, .infoBox textarea {
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
 }
 
 #login, #register {
@@ -229,7 +230,7 @@ input:focus-visible, textarea:focus-visible {
 .appointmentWrapper {
     padding: 20px;
     margin: 0 20px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 10px 10px;
 }
 
@@ -241,7 +242,7 @@ input:focus-visible, textarea:focus-visible {
 .servicesWrapper {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
     padding: 5vh 10vw;
     background-color: rgba(255,255,255,1);
     text-align: left;
@@ -251,7 +252,7 @@ input:focus-visible, textarea:focus-visible {
 .contactWrapper {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
     padding: 5vh 10vw;
     background-color: rgba(255,255,255,1);
     text-align: left;
@@ -304,7 +305,7 @@ input:focus-visible, textarea:focus-visible {
 .bookingsWrapper {
     display: flow-root;
     max-width: 1000px;
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.3);
     padding: 4vh 4vw;
     background-color: rgba(255,255,255,1);
     text-align: left;
@@ -344,7 +345,7 @@ input:focus-visible, textarea:focus-visible {
 .FormGroup {
     border: none;
     padding: 0.3em;
-    box-shadow: 0px 5px 20px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
     margin: 2em 0;
 }
 

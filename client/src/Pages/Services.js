@@ -16,7 +16,7 @@ export default function Services() {
             </div>
             <div className="servicesCard">
                 <div className="servicesWrapper">
-                <a class="anchor" id="fill"></a>
+                <a className="anchor" id="fill"></a>
                     <h2>Water tank refill service</h2>
                     <div className="servicesBox">
                         <h3>
@@ -30,7 +30,7 @@ export default function Services() {
                         <img alt="maraetai blue logo" src={logo} style={{transform: 'translateY(0.5em)'}}/>
                     </div>
                 </div>
-                <a class="anchor" id="clean"></a>
+                <a className="anchor" id="clean"></a>
                 <div className="servicesWrapper">
                     <h2>Water tank cleaning service</h2>
                     <div className="servicesBox">

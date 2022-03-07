@@ -18,7 +18,7 @@
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
 }
 body {
-  padding-top: 163px;
+  padding-top: 130px;
   color: var(--mainBlack);
   background-color: #1f687a;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -115,8 +115,8 @@ h6 {
   padding: 2rem 2rem;
   background: white;
   z-index: 999;
-  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.1s;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s;
 }
 .navbar:hover {
   box-shadow: 3px 3px 20px rgba(0, 0, 0, 0);
@@ -176,6 +176,9 @@ h6 {
   justify-content: center;
 }
 @media screen and (min-width: 768px) {
+  body {
+    padding-top: 163px;
+  }
   .nav-header {
     width: auto;
   }
