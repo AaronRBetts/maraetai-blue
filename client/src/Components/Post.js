@@ -26,6 +26,7 @@ const Post = (props) => {
                     {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }
                   </div>
                   <div className="apptButtons postOrder">
+                    <h3>Order successful!</h3>
                     <a className="btn-primary" href="/">Home</a>
                   </div>
               </div>

@@ -36,10 +36,6 @@ const Confirmation = (props) => {
         }
     }
 
-    function backStep() {
-      props.setFormStep(4);
-    }
-
     function processAppointment(data) {
       console.log('process appointment')
       props.setFormStep(6);

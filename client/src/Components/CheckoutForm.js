@@ -26,7 +26,7 @@ const CARD_OPTIONS = {
 }
 
 function CheckoutForm(props) {
-    const [success, setSuccess] = useState(false);
+    // const [success, setSuccess] = useState(false);
     const [loading, setLoading] = useState(false);
     const stripe = useStripe();
     const elements = useElements();
@@ -61,7 +61,6 @@ function CheckoutForm(props) {
           if(data.success) {
             try {
               props.bookAppointment();
-              setSuccess(true)
             } catch (err) {
               console.log("Error: ", err.message)
             }
@@ -93,8 +92,6 @@ function CheckoutForm(props) {
           <input className='btn-secondary' onClick={backStep} value="back"/>
           </div> 
         </form> 
-        {/* <div className="apptButtons servicesBox">
-        </div> */}
       </>
       :
       <div>

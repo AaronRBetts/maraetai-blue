@@ -4,12 +4,12 @@ import '../App.css'
 
 const Info = (props) => {
   const [err, setErr] = useState({})
-  const [disable, setDisabled] = useState(true)
+  const [disabled, setDisabled] = useState(true)
 
   useEffect(() => {
     setDisabled(formValidation())
     
-  }, [props.userPhone, props.userAddress, props.userNotes])
+  }, [, props.userPhone, props.userAddress, props.userNotes])
   
   const formValidation = () => {
     let regPhone = /^(\+{0,})(\d{0,})([(]{1}\d{1,3}[)]{0,}){0,}(\s?\d+|\+\d{2,3}\s{1}\d+|\d+){1}[\s|-]?\d+([\s|-]?\d+){1,2}(\s){0,}$/gm;

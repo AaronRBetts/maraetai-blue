@@ -67,10 +67,10 @@ export default class Navbar extends Component {
                         <>
                             <div className="vr"></div>
                             <li>
-                                <Link to="/Login">Login</Link>
+                                <Link to="/login">Login</Link>
                             </li>
                             <li>
-                                <Link to="/Register">Register</Link>
+                                <Link to="/register">Register</Link>
                             </li>                        
                         </>
                         }
