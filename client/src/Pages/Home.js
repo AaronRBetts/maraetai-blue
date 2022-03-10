@@ -9,6 +9,8 @@ import Size from '../Components/Size'
 import Location from '../Components/Location'
 import Landing from '../Components/Landing'
 import Post from '../Components/Post'
+import HomeContent from '../Components/HomeContent'
+import Banner from '../Components/Banner'
 
 function Home() {
     const [formStep, setFormStep] = useState(0)
@@ -119,6 +121,9 @@ function Home() {
                     }
             </div>
           </div>
+          <Banner />
+          <HomeContent />
+          <Banner />
         </div>
     )
 }

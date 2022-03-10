@@ -39,6 +39,8 @@ h1 {
 h2 {
   font-size: 2em;
   margin-bottom: 0.75em;
+  opacity: 0.8;
+  font-weight: 100;
 }
 h3 {
   opacity: 0.8;

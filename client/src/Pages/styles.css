@@ -390,6 +390,54 @@ input:focus-visible, textarea:focus-visible {
     background: transparent;
 }
 
+.contentSection{
+    min-height: 60vh;
+    height: auto;
+    display: flex;
+    background: url('https://images.myguide-cdn.com/content/2/large/maraetai-coast-scenic-drive-640574.jpg');
+    background-position: center right;
+
+}
+.contentSection .contentWrapper {
+    margin-left:  0;
+    min-height: 100%;
+    width: 600px;
+    display: flex;
+    background-color: white;
+    box-shadow: 3px 3px 40px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    z-index: 10;
+}
+.contentSection .contentWrapper:after {
+    box-shadow: 40px 0px 20px rgba(0, 0, 0, 0.2);
+  content: '';
+  position: absolute;
+  left: 300px;
+  width: 300px;
+  height: 700px;
+  background: white;
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(17deg);
+  -ms-transform: skew(17deg);
+  transform: skew(17deg);
+  z-index: 20;
+}
+.contentSection .content {
+    margin: auto 5vw;
+    max-width: 600px;
+    z-index: 80;
+}
+.banner {
+    height: 100px;
+    background-color: white;
+    display: flex;
+    z-index: 200;
+    position: relative;
+    background: url('../images/tile_background.png');
+}
+
 .pageWrapper {
     display: flex;
 }
@@ -529,6 +577,8 @@ input:focus-visible, textarea:focus-visible {
     background-color: #1f687a;
     color: #ffffff;
     width: 100%;
+    position: relative;
+    z-index: 100;
 }
   
 .footer-clean h3 {
@@ -602,6 +652,9 @@ input:focus-visible, textarea:focus-visible {
 @media (max-width:991px) {
     .footer-clean .item.social > a {
       margin-top:40px;
+    }
+    .contentSection .contentWrapper:after {
+        display: none;
     }
 }
   
