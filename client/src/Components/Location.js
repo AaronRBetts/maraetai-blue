@@ -5,12 +5,7 @@ const Location = (props) => {
 
   function handleClick(e) {
       e.preventDefault()
-      if (e.target.value === "Maraetai") {
-          props.setLocation('Maraetai')
-      } 
-      if (e.target.value === "Beachlands") {
-        props.setLocation('Beachlands')
-      }
+        props.setLocation(e.target.value)
       props.setFormStep(2);
   }
 
@@ -24,6 +19,7 @@ const Location = (props) => {
         <div className="servicesBox">
             <input className="btn-primary" type="submit" value="Maraetai" onClick={handleClick}/>
             <input className="btn-primary" type="submit" value="Beachlands" onClick={handleClick}/>
+            <input className="btn-primary" type="submit" value="Whitford" onClick={handleClick}/>
         </div><br />
       <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
 

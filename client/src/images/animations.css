@@ -1,17 +1,17 @@
 #wheel1, #wheel2, #wheel3 {
     transform-box: fill-box;
     transform-origin: center;
-    animation: rotate 3s infinite linear;
+    animation: rotate 9s infinite linear;
 }
 
 #truck {
     transform-box: fill-box;
     transform-origin: center;
-    animation: shake 6s infinite;
+    animation: shake 18s infinite;
 }
 
 #road-lines {
-    animation: slide 3s infinite linear;
+    animation: slide 9s infinite linear;
 }
 
 .truckBanner {

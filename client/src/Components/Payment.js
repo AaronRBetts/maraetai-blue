@@ -13,7 +13,7 @@ const Payment = (props) => {
   return (
       <>
         <Elements stripe={stripeTestPromise}>
-            <CheckoutForm setFormStep={props.setFormStep} bookAppointment={props.bookAppointment}/>
+            <CheckoutForm setFormStep={props.setFormStep} bookAppointment={props.bookAppointment} total={props.total}/>
         </Elements>
       </>
   )

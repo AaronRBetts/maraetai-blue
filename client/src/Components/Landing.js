@@ -8,7 +8,7 @@ export default function Landing() {
         <div className="landingWrapper">
             <div className="landingText">
                 <h1>Maraetai Blue</h1>
-                <h3>East Auckland water tank delivery and cleaning service.</h3> <hr />
+                <h3>Pohutukawa coast water tank delivery and cleaning service.</h3> <hr />
                 <a className="btn-primary landing" href='#services'>Water Delivery</a>
                 <a className="btn-secondary landing" href='/contact'>Tank Clean</a>
             </div>

@@ -11,6 +11,7 @@ import Landing from '../Components/Landing'
 import Post from '../Components/Post'
 import HomeContent from '../Components/HomeContent'
 import Banner from '../Components/Banner'
+import Testimonials from '../Components/Testimonials'
 
 function Home() {
     const [formStep, setFormStep] = useState(0)
@@ -18,6 +19,7 @@ function Home() {
     const [service, setService] = useState('')
     const [location, setLocation] = useState('')
     const [size, setSize] = useState('')
+    const [total, setTotal] = useState(0)
     const [selectedDay, setSelectedDay] = useState('')
     const [userPhone, setUserPhone] = useState('')
     const [userAddress, setUserAddress] = useState('')
@@ -59,6 +61,7 @@ function Home() {
           return <Size setFormStep={setFormStep} 
           user={user}
           setSize={setSize}
+          setTotal={setTotal}
           />
         case 3:
           return <Appointment 
@@ -84,6 +87,7 @@ function Home() {
           user={user} 
           service={service}
           size={size}
+          total={total}
           location={location}
           selectedDay={selectedDay}
           userPhone={userPhone}
@@ -95,6 +99,7 @@ function Home() {
           user={user} 
           service={service}
           size={size}
+          total={total}
           location={location}
           selectedDay={selectedDay}
           userPhone={userPhone}
@@ -123,6 +128,8 @@ function Home() {
           </div>
           <Banner />
           <HomeContent />
+          <Banner />
+          <Testimonials />
           <Banner />
         </div>
     )

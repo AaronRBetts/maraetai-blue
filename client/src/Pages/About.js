@@ -19,7 +19,7 @@ export default function About() {
                     <h2>Maraetai Blue Ltd</h2>
                     <div className="servicesBox">
                         <h3>
-                            Maraetai Blue supplies clean water to East Auckland households.<br />
+                            Maraetai Blue supplies clean water to Pohutukawa coast households.<br />
                         </h3><hr />
                             <p>Jacob Patchett, a friendly local man born and raised in Maraetai, started Maraetai Blue Tank Cleaning 8 years ago. His business is a sister business to the Maraetai Blue water delivery company.
                             <br /><br />

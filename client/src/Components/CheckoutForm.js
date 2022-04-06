@@ -52,7 +52,7 @@ function CheckoutForm(props) {
               'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-              amount: 10000,
+              amount: props.total,
               id
             })
           })

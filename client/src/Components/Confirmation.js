@@ -22,6 +22,7 @@ const Confirmation = (props) => {
               service: props.service,
               location: props.location,
               size: props.size,
+              total: props.total,
               userName: props.user.name,
               userEmail: props.user.email,
               userPhone: props.userPhone,
@@ -59,9 +60,9 @@ const Confirmation = (props) => {
                   <p><b>Phone:</b></p><p>{props.userPhone}</p>
                   <p><b>Address:</b></p><p>{props.userAddress}</p>
                   {props.userNotes ? <><p><b>Notes:</b></p><p>{props.userNotes}</p></> : <></> }<p></p><p></p>
-                  <p><b>Total:</b></p><p><b>$100</b></p>
+                  <p><b>Total:</b></p><p><b>${props.total}</b></p>
                 </div>
-                <Payment setFormStep={props.setFormStep} bookAppointment={bookAppointment}/>
+                <Payment setFormStep={props.setFormStep} bookAppointment={bookAppointment} total={props.total}/>
                 {/* <div className="apptButtons">
                   <input className="btn-primary" type="submit" value="Confirm" onClick={bookAppointment}/>
                   <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>

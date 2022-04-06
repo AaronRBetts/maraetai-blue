@@ -6,6 +6,21 @@ const Size = (props) => {
     e.preventDefault()
     props.setSize(e.target.value)
     props.setFormStep(3);
+    switch (e.target.value) {
+      case "5k Litres":
+      props.setTotal(170)
+        break;
+      case "10k Litres":
+        props.setTotal(260)
+        
+        break;
+      case "14k Litres":
+        props.setTotal(300)
+        break;
+    
+      default:
+        break;
+    }
 }
 
   function backStep() {
@@ -18,7 +33,7 @@ const Size = (props) => {
                 <input className="btn-primary" type="submit" value="5k Litres" onClick={handleClick}/>
                 <input className="btn-primary" type="submit" value="10k Litres" onClick={handleClick}/>
                 <input className="btn-primary" type="submit" value="14k Litres" onClick={handleClick}/><br />
-          <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
+                <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
             </div>
 </>
     )

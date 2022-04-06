@@ -5,6 +5,7 @@ const Appointment = new mongoose.Schema({
     service: { type: String, required: true },
     location: { type: String, required: true },
     size: { type: String, required: true },
+    total: { type: Number, required: true },
     userName: { type: String, required: true },
     userEmail: { type: String, required: true },
     userPhone: { type: String, required: true },
