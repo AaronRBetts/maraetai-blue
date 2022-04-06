@@ -12,7 +12,7 @@ width: 100%;
 max-width: 1020px;
 padding: 40px 20px;
 margin: auto;
-min-height: 500px;
+min-height: 420px;
 }
 
 .testim .arrow {
@@ -124,9 +124,8 @@ opacity: 1;
 .testim .cont div .img img {
 display: block;
 width: 100px;
-height: 100px;
+height: auto;
 margin: auto;
-border-radius: 50%;
 }
 
 .testim .cont div h2 {
@@ -136,7 +135,6 @@ margin: 15px 0;
 }
 
 .testim .cont div p {
-font-size: 1.15em;
 /* color: #eee; */
 width: 80%;
 margin: auto;
