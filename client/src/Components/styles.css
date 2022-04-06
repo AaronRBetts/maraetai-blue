@@ -12,6 +12,7 @@ width: 100%;
 max-width: 1020px;
 padding: 40px 20px;
 margin: auto;
+min-height: 500px;
 }
 
 .testim .arrow {
