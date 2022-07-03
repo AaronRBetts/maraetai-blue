@@ -32,6 +32,7 @@ mongoose.connect(process.env.LOGINMONGODB_URI,
     })
 
 app.post('/api/register',cors(),  async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { name, email, phone, address, password, password2 } = req.body
 
     var response = {
@@ -67,6 +68,7 @@ app.post('/api/register',cors(),  async (req,res) => {
 })
 
 app.put('/api/update',cors(),  async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { name, email, phone, address } = req.body
     var conditions = { email: email }
 
@@ -86,12 +88,14 @@ app.put('/api/update',cors(),  async (req,res) => {
 })
 
 app.post('/api/change-password',cors(),  (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { token } = req.body
 
     const user = jwt.verify(token, process.env.TOKEN_SECRET)
 })
 
 app.post('/api/login',cors(),  async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { username, password } = req.body
 
     const user = await User.findOne({
@@ -113,6 +117,7 @@ app.post('/api/login',cors(),  async (req,res) => {
 })
 
 app.post('/api/contact',cors(),  async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { from, contact, message } = req.body
 
     var response = {
@@ -133,6 +138,7 @@ app.post('/api/contact',cors(),  async (req,res) => {
 })
 
 app.post('/api/book',cors(),  async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { 
         date,
         service,
@@ -196,6 +202,7 @@ app.post('/api/payment', /*ensureAuth,*/cors(), async (req, res) => {
 })
 
 app.post('/api/bookings', /*ensureAuth,*/ cors(), async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { token } = req.body
 
     try {
@@ -224,6 +231,7 @@ app.post('/api/bookings', /*ensureAuth,*/ cors(), async (req,res) => {
 })
 
 app.post('/api/home', /*ensureAuth,*/cors(),  async (req,res) => {
+    res.header("Access-Control-Allow-Origin", "*");
     const { token } = req.body
 
     try {
