@@ -14,7 +14,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET)
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-const whitelist = ["https://bertieb1.sg-host.com"]
+const whitelist = ["*"]
 
 const corsOptions = {
 
