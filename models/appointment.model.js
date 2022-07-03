@@ -2,6 +2,7 @@ const mongoose = require('mongoose')
 
 const Appointment = new mongoose.Schema({
     date: { type: Date, required: true },
+    assigned: { type: String, default: 'unassigned' },
     service: { type: String, required: true },
     location: { type: String, required: true },
     size: { type: String, required: true },
@@ -10,6 +11,7 @@ const Appointment = new mongoose.Schema({
     userEmail: { type: String, required: true },
     userPhone: { type: String, required: true },
     userAddress: { type: String, required: true },
+    completed: { type: Boolean, default: false },
     userNotes: { type: String },
     createdAt: { type: Date, default: Date.now },
     },

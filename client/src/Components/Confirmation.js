@@ -68,7 +68,6 @@ const Confirmation = (props) => {
                   <input className="btn-secondary" type="submit" value="Back" onClick={backStep}/>
                 </div> */}
             </div>
-
           </div>
       </div>
     )

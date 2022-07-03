@@ -29,7 +29,6 @@ function Login() {
     } else {
       alert('Your username and password combination is incorrect')
     }
-    console.log('logged in')
   }
 
   return (

@@ -28,7 +28,7 @@ function Register() {
   }, [name, email, password, password2])
   
   const formValidation = () => {
-    let regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/;
+    let regEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
     let regPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d#$@!%&*?]{8,30}$/;
     let newErrors = {}
     let err = false

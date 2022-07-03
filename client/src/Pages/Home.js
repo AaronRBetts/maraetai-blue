@@ -2,6 +2,7 @@ import React, {  useEffect, useState } from 'react'
 import './styles.css'
 import '../App.css'
 import Appointment from '../Components/Appointment'
+import {Link} from 'react-router-dom'
 import Service from '../Components/Service'
 import Info from '../Components/Info'
 import Confirmation from '../Components/Confirmation'
@@ -122,7 +123,7 @@ function Home() {
               <br />
               {user ? 
                     <p style={{color: 'grey', marginTop: '1em'}}>Logged in as {user.name}</p> : 
-                    <p><a href="/login">Log in</a> or <a href="/register">Register</a></p>
+                    <p><Link to="/login">Log in</Link> or <Link to="/register">Register</Link></p>
                     }
             </div>
           </div>
