@@ -32,7 +32,7 @@ mongoose.connect(process.env.LOGINMONGODB_URI,
         useUnifiedTopology: true
     })
 
-app.post('/api/register',cors(),  async (req,res) => {
+app.post('/api/register',cors(corsOpts),  async (req,res) => {
     const { name, email, phone, address, password, password2 } = req.body
 
     var response = {
@@ -67,7 +67,7 @@ app.post('/api/register',cors(),  async (req,res) => {
     res.json(response)
 })
 
-app.put('/api/update',cors(),  async (req,res) => {
+app.put('/api/update',cors(corsOpts),  async (req,res) => {
     const { name, email, phone, address } = req.body
     var conditions = { email: email }
 
@@ -86,13 +86,13 @@ app.put('/api/update',cors(),  async (req,res) => {
     res.json(response)
 })
 
-app.post('/api/change-password',cors(),  (req,res) => {
+app.post('/api/change-password',cors(corsOpts),  (req,res) => {
     const { token } = req.body
 
     const user = jwt.verify(token, process.env.TOKEN_SECRET)
 })
 
-app.post('/api/login',cors(),  async (req,res) => {
+app.post('/api/login',cors(corsOpts),  async (req,res) => {
     const { username, password } = req.body
 
     const user = await User.findOne({
@@ -113,7 +113,7 @@ app.post('/api/login',cors(),  async (req,res) => {
     res.json({ status: 'error', error: 'Invalid username/password' })
 })
 
-app.post('/api/contact',cors(),  async (req,res) => {
+app.post('/api/contact',cors(corsOpts),  async (req,res) => {
     const { from, contact, message } = req.body
 
     var response = {
@@ -133,7 +133,7 @@ app.post('/api/contact',cors(),  async (req,res) => {
     return res.json(response)
 })
 
-app.post('/api/book',cors(),  async (req,res) => {
+app.post('/api/book',cors(corsOpts),  async (req,res) => {
     const { 
         date,
         service,
@@ -172,7 +172,7 @@ app.post('/api/book',cors(),  async (req,res) => {
     return res.json(response)
 })
 
-app.post('/api/payment', /*ensureAuth,*/cors(), async (req, res) => {
+app.post('/api/payment', /*ensureAuth,*/cors(corsOpts), async (req, res) => {
     let {amount, id} = req.body
     try {
         const payment = await stripe.paymentIntents.create({
@@ -196,7 +196,7 @@ app.post('/api/payment', /*ensureAuth,*/cors(), async (req, res) => {
     }
 })
 
-app.post('/api/bookings', /*ensureAuth,*/ cors(), async (req,res) => {
+app.post('/api/bookings', /*ensureAuth,*/ cors(corsOpts), async (req,res) => {
     const { token } = req.body
 
     try {
@@ -224,7 +224,7 @@ app.post('/api/bookings', /*ensureAuth,*/ cors(), async (req,res) => {
     // }
 })
 
-app.post('/api/home', /*ensureAuth,*/cors(),  async (req,res) => {
+app.post('/api/home', /*ensureAuth,*/cors(corsOpts),  async (req,res) => {
     const { token } = req.body
 
     try {
