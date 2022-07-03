@@ -14,29 +14,16 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET)
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-const whitelist = ["*"]
 
-const corsOptions = {
-
-  origin: function (origin, callback) {
-
-    if (!origin || whitelist.indexOf(origin) !== -1) {
-
-      callback(null, true)
-
-    } else {
-
-      callback(new Error("Not allowed by CORS"))
-
-    }
-
-  },
-
-  credentials: true,
-
-}
-
-app.use(cors(corsOptions))
+const cors = require('cors');    
+const corsOpts = {
+    origin: '*',
+    credentials: true,
+    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
+};
+app.use(cors(corsOpts));
 app.use(express.json())
 
 mongoose.connect(process.env.LOGINMONGODB_URI,
